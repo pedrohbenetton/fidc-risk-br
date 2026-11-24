@@ -1,0 +1,16 @@
+{
+  "elapsed_seconds": 270.13,
+  "months_processed": 106,
+  "min_competence": "2018-01-31",
+  "max_competence": "2026-10-31",
+  "fund_month_rows": 215748,
+  "unique_entities": 6146,
+  "unique_gestores": 602,
+  "cedente_edge_rows": 135260,
+  "unique_cedentes": 9179,
+  "unique_pj_cedentes": 8594,
+  "rcvm175_transition_duplicates_resolved": 1245,
+  "aging_bucket_sum_invariant_pass_rate": 0.99987,
+  "tranche_pl_vs_tab4_reconciliation_rate": 0.97724,
+  "gestor_coverage_rate": 0.99874
+}

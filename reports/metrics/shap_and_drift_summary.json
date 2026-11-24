@@ -1,0 +1,32 @@
+{
+  "elapsed_seconds": 2.23,
+  "latest_competence": "2026-10-31",
+  "live_scored_funds": 3417,
+  "top5_shap_features": [
+    {
+      "feature": "pdd_carteira_pct",
+      "label_ptbr": "Provisão PDD Total (% Carteira)",
+      "mean_abs_shap": 0.06740237562961751
+    },
+    {
+      "feature": "inad_total_pct",
+      "label_ptbr": "Inadimplência Total Vencida (% Carteira)",
+      "mean_abs_shap": 0.0391028073651837
+    },
+    {
+      "feature": "rentab_subord_mes_clean",
+      "label_ptbr": "Retorno Mensal da Cota Subordinada (%)",
+      "mean_abs_shap": 0.03846807600561568
+    },
+    {
+      "feature": "subordinacao_pct",
+      "label_ptbr": "Colchão de Cota Subordinada (% PL)",
+      "mean_abs_shap": 0.029343731409674254
+    },
+    {
+      "feature": "admin_loo_stress_rate",
+      "label_ptbr": "Taxa de Estresse na Administradora (LOO)",
+      "mean_abs_shap": 0.027994820014592896
+    }
+  ]
+}

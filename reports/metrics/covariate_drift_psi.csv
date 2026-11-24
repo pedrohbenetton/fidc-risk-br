@@ -1,0 +1,121 @@
+semester,feature,label_ptbr,psi,js_divergence,status
+2022H1,pdd_carteira_pct,Provisão PDD Total (% Carteira),0.043,0.0023,ESTAVEL
+2022H1,inad_total_pct,Inadimplência Total Vencida (% Carteira),0.0131,0.0023,ESTAVEL
+2022H1,rentab_subord_mes_clean,Retorno Mensal da Cota Subordinada (%),0.0458,0.0004,ESTAVEL
+2022H1,subordinacao_pct,Colchão de Cota Subordinada (% PL),0.0137,0.0022,ESTAVEL
+2022H1,admin_loo_stress_rate,Taxa de Estresse na Administradora (LOO),0.0834,0.0111,ESTAVEL
+2022H1,inad_31_60_pct,Atraso 31–60 dias (% Carteira),0.0017,0.0002,ESTAVEL
+2022H1,total_enhancement_pct,Reforço Total Subord. + Mezanino (% PL),0.0137,0.0022,ESTAVEL
+2022H1,inad_90p_vol_6m,Volatilidade 6m da Inadimplência,0.012,0.0013,ESTAVEL
+2022H1,cota_fidc_cross_pct,Alocação Cruzada em Cotas de FIDCs (%),0.0023,0.0013,ESTAVEL
+2022H1,is_aberto,Condomínio Aberto (Resgatável),0.0,0.0,ESTAVEL
+2022H1,rentab_senior_3m_excess,Excesso Médio 3m Cota Sênior vs. CDI,1.5214,0.0017,CRITICO
+2022H1,alm_liq_30d_ratio,Cobertura de Liquidez 30 dias (ALM),0.0068,0.0005,ESTAVEL
+2022H2,pdd_carteira_pct,Provisão PDD Total (% Carteira),0.0316,0.0036,ESTAVEL
+2022H2,inad_total_pct,Inadimplência Total Vencida (% Carteira),0.0087,0.0016,ESTAVEL
+2022H2,rentab_subord_mes_clean,Retorno Mensal da Cota Subordinada (%),0.0779,0.0005,ESTAVEL
+2022H2,subordinacao_pct,Colchão de Cota Subordinada (% PL),0.0288,0.0044,ESTAVEL
+2022H2,admin_loo_stress_rate,Taxa de Estresse na Administradora (LOO),0.9027,0.0069,CRITICO
+2022H2,inad_31_60_pct,Atraso 31–60 dias (% Carteira),0.0103,0.0003,ESTAVEL
+2022H2,total_enhancement_pct,Reforço Total Subord. + Mezanino (% PL),0.0288,0.0044,ESTAVEL
+2022H2,inad_90p_vol_6m,Volatilidade 6m da Inadimplência,0.0041,0.0013,ESTAVEL
+2022H2,cota_fidc_cross_pct,Alocação Cruzada em Cotas de FIDCs (%),0.003,0.0007,ESTAVEL
+2022H2,is_aberto,Condomínio Aberto (Resgatável),0.0,0.0,ESTAVEL
+2022H2,rentab_senior_3m_excess,Excesso Médio 3m Cota Sênior vs. CDI,1.6309,0.0017,CRITICO
+2022H2,alm_liq_30d_ratio,Cobertura de Liquidez 30 dias (ALM),0.0042,0.0004,ESTAVEL
+2023H1,pdd_carteira_pct,Provisão PDD Total (% Carteira),0.0218,0.0031,ESTAVEL
+2023H1,inad_total_pct,Inadimplência Total Vencida (% Carteira),0.0118,0.0008,ESTAVEL
+2023H1,rentab_subord_mes_clean,Retorno Mensal da Cota Subordinada (%),0.1071,0.0008,MODERADO
+2023H1,subordinacao_pct,Colchão de Cota Subordinada (% PL),0.0422,0.0059,ESTAVEL
+2023H1,admin_loo_stress_rate,Taxa de Estresse na Administradora (LOO),1.6666,0.0079,CRITICO
+2023H1,inad_31_60_pct,Atraso 31–60 dias (% Carteira),0.0172,0.0004,ESTAVEL
+2023H1,total_enhancement_pct,Reforço Total Subord. + Mezanino (% PL),0.0422,0.0059,ESTAVEL
+2023H1,inad_90p_vol_6m,Volatilidade 6m da Inadimplência,0.0098,0.0012,ESTAVEL
+2023H1,cota_fidc_cross_pct,Alocação Cruzada em Cotas de FIDCs (%),0.0027,0.001,ESTAVEL
+2023H1,is_aberto,Condomínio Aberto (Resgatável),0.0004,0.0001,ESTAVEL
+2023H1,rentab_senior_3m_excess,Excesso Médio 3m Cota Sênior vs. CDI,1.6205,0.0025,CRITICO
+2023H1,alm_liq_30d_ratio,Cobertura de Liquidez 30 dias (ALM),0.0366,0.0047,ESTAVEL
+2023H2,pdd_carteira_pct,Provisão PDD Total (% Carteira),0.0145,0.0015,ESTAVEL
+2023H2,inad_total_pct,Inadimplência Total Vencida (% Carteira),0.015,0.0015,ESTAVEL
+2023H2,rentab_subord_mes_clean,Retorno Mensal da Cota Subordinada (%),0.0968,0.0004,ESTAVEL
+2023H2,subordinacao_pct,Colchão de Cota Subordinada (% PL),0.0652,0.0069,ESTAVEL
+2023H2,admin_loo_stress_rate,Taxa de Estresse na Administradora (LOO),1.1925,0.0092,CRITICO
+2023H2,inad_31_60_pct,Atraso 31–60 dias (% Carteira),0.01,0.0002,ESTAVEL
+2023H2,total_enhancement_pct,Reforço Total Subord. + Mezanino (% PL),0.0577,0.0064,ESTAVEL
+2023H2,inad_90p_vol_6m,Volatilidade 6m da Inadimplência,0.0081,0.0003,ESTAVEL
+2023H2,cota_fidc_cross_pct,Alocação Cruzada em Cotas de FIDCs (%),0.0,0.0005,ESTAVEL
+2023H2,is_aberto,Condomínio Aberto (Resgatável),0.0017,0.0002,ESTAVEL
+2023H2,rentab_senior_3m_excess,Excesso Médio 3m Cota Sênior vs. CDI,1.6674,0.0032,CRITICO
+2023H2,alm_liq_30d_ratio,Cobertura de Liquidez 30 dias (ALM),0.0426,0.0056,ESTAVEL
+2024H1,pdd_carteira_pct,Provisão PDD Total (% Carteira),0.0087,0.001,ESTAVEL
+2024H1,inad_total_pct,Inadimplência Total Vencida (% Carteira),0.0333,0.0029,ESTAVEL
+2024H1,rentab_subord_mes_clean,Retorno Mensal da Cota Subordinada (%),0.1045,0.0028,MODERADO
+2024H1,subordinacao_pct,Colchão de Cota Subordinada (% PL),0.1109,0.0128,MODERADO
+2024H1,admin_loo_stress_rate,Taxa de Estresse na Administradora (LOO),0.5611,0.0064,CRITICO
+2024H1,inad_31_60_pct,Atraso 31–60 dias (% Carteira),0.022,0.0003,ESTAVEL
+2024H1,total_enhancement_pct,Reforço Total Subord. + Mezanino (% PL),0.0791,0.0088,ESTAVEL
+2024H1,inad_90p_vol_6m,Volatilidade 6m da Inadimplência,0.0297,0.0009,ESTAVEL
+2024H1,cota_fidc_cross_pct,Alocação Cruzada em Cotas de FIDCs (%),0.015,0.0039,ESTAVEL
+2024H1,is_aberto,Condomínio Aberto (Resgatável),0.0008,0.0001,ESTAVEL
+2024H1,rentab_senior_3m_excess,Excesso Médio 3m Cota Sênior vs. CDI,1.7963,0.0021,CRITICO
+2024H1,alm_liq_30d_ratio,Cobertura de Liquidez 30 dias (ALM),0.0311,0.0037,ESTAVEL
+2024H2,pdd_carteira_pct,Provisão PDD Total (% Carteira),0.0012,0.0004,ESTAVEL
+2024H2,inad_total_pct,Inadimplência Total Vencida (% Carteira),0.0617,0.0037,ESTAVEL
+2024H2,rentab_subord_mes_clean,Retorno Mensal da Cota Subordinada (%),0.0998,0.0034,ESTAVEL
+2024H2,subordinacao_pct,Colchão de Cota Subordinada (% PL),0.1201,0.0127,MODERADO
+2024H2,admin_loo_stress_rate,Taxa de Estresse na Administradora (LOO),0.7772,0.0187,CRITICO
+2024H2,inad_31_60_pct,Atraso 31–60 dias (% Carteira),0.0434,0.0003,ESTAVEL
+2024H2,total_enhancement_pct,Reforço Total Subord. + Mezanino (% PL),0.0779,0.0067,ESTAVEL
+2024H2,inad_90p_vol_6m,Volatilidade 6m da Inadimplência,0.0524,0.0006,ESTAVEL
+2024H2,cota_fidc_cross_pct,Alocação Cruzada em Cotas de FIDCs (%),0.0565,0.0127,ESTAVEL
+2024H2,is_aberto,Condomínio Aberto (Resgatável),0.002,0.0002,ESTAVEL
+2024H2,rentab_senior_3m_excess,Excesso Médio 3m Cota Sênior vs. CDI,1.8468,0.0054,CRITICO
+2024H2,alm_liq_30d_ratio,Cobertura de Liquidez 30 dias (ALM),0.0254,0.003,ESTAVEL
+2025H1,pdd_carteira_pct,Provisão PDD Total (% Carteira),0.0063,0.0011,ESTAVEL
+2025H1,inad_total_pct,Inadimplência Total Vencida (% Carteira),0.0969,0.0056,ESTAVEL
+2025H1,rentab_subord_mes_clean,Retorno Mensal da Cota Subordinada (%),0.1099,0.003,MODERADO
+2025H1,subordinacao_pct,Colchão de Cota Subordinada (% PL),0.1388,0.015,MODERADO
+2025H1,admin_loo_stress_rate,Taxa de Estresse na Administradora (LOO),1.1855,0.019,CRITICO
+2025H1,inad_31_60_pct,Atraso 31–60 dias (% Carteira),0.0746,0.0001,ESTAVEL
+2025H1,total_enhancement_pct,Reforço Total Subord. + Mezanino (% PL),0.0621,0.0052,ESTAVEL
+2025H1,inad_90p_vol_6m,Volatilidade 6m da Inadimplência,0.091,0.0005,ESTAVEL
+2025H1,cota_fidc_cross_pct,Alocação Cruzada em Cotas de FIDCs (%),0.1176,0.0234,MODERADO
+2025H1,is_aberto,Condomínio Aberto (Resgatável),0.0129,0.0016,ESTAVEL
+2025H1,rentab_senior_3m_excess,Excesso Médio 3m Cota Sênior vs. CDI,1.8748,0.0068,CRITICO
+2025H1,alm_liq_30d_ratio,Cobertura de Liquidez 30 dias (ALM),0.0752,0.0056,ESTAVEL
+2025H2,pdd_carteira_pct,Provisão PDD Total (% Carteira),0.0154,0.002,ESTAVEL
+2025H2,inad_total_pct,Inadimplência Total Vencida (% Carteira),0.149,0.0093,MODERADO
+2025H2,rentab_subord_mes_clean,Retorno Mensal da Cota Subordinada (%),0.1369,0.0038,MODERADO
+2025H2,subordinacao_pct,Colchão de Cota Subordinada (% PL),0.1646,0.017,MODERADO
+2025H2,admin_loo_stress_rate,Taxa de Estresse na Administradora (LOO),0.5903,0.0148,CRITICO
+2025H2,inad_31_60_pct,Atraso 31–60 dias (% Carteira),0.1073,0.0003,MODERADO
+2025H2,total_enhancement_pct,Reforço Total Subord. + Mezanino (% PL),0.059,0.0046,ESTAVEL
+2025H2,inad_90p_vol_6m,Volatilidade 6m da Inadimplência,0.1393,0.0013,MODERADO
+2025H2,cota_fidc_cross_pct,Alocação Cruzada em Cotas de FIDCs (%),0.1852,0.0341,MODERADO
+2025H2,is_aberto,Condomínio Aberto (Resgatável),0.032,0.004,ESTAVEL
+2025H2,rentab_senior_3m_excess,Excesso Médio 3m Cota Sênior vs. CDI,1.7662,0.0016,CRITICO
+2025H2,alm_liq_30d_ratio,Cobertura de Liquidez 30 dias (ALM),0.0957,0.0072,ESTAVEL
+2026H1,pdd_carteira_pct,Provisão PDD Total (% Carteira),0.0101,0.001,ESTAVEL
+2026H1,inad_total_pct,Inadimplência Total Vencida (% Carteira),0.1414,0.008,MODERADO
+2026H1,rentab_subord_mes_clean,Retorno Mensal da Cota Subordinada (%),0.2401,0.0037,MODERADO
+2026H1,subordinacao_pct,Colchão de Cota Subordinada (% PL),0.5254,0.0637,CRITICO
+2026H1,admin_loo_stress_rate,Taxa de Estresse na Administradora (LOO),2.2708,0.0483,CRITICO
+2026H1,inad_31_60_pct,Atraso 31–60 dias (% Carteira),0.0944,0.0003,ESTAVEL
+2026H1,total_enhancement_pct,Reforço Total Subord. + Mezanino (% PL),0.318,0.0394,CRITICO
+2026H1,inad_90p_vol_6m,Volatilidade 6m da Inadimplência,0.1203,0.0007,MODERADO
+2026H1,cota_fidc_cross_pct,Alocação Cruzada em Cotas de FIDCs (%),0.1934,0.0401,MODERADO
+2026H1,is_aberto,Condomínio Aberto (Resgatável),0.0324,0.004,ESTAVEL
+2026H1,rentab_senior_3m_excess,Excesso Médio 3m Cota Sênior vs. CDI,1.221,0.0006,CRITICO
+2026H1,alm_liq_30d_ratio,Cobertura de Liquidez 30 dias (ALM),0.0984,0.0079,ESTAVEL
+2026H2,pdd_carteira_pct,Provisão PDD Total (% Carteira),0.0057,0.0008,ESTAVEL
+2026H2,inad_total_pct,Inadimplência Total Vencida (% Carteira),0.1481,0.0085,MODERADO
+2026H2,rentab_subord_mes_clean,Retorno Mensal da Cota Subordinada (%),0.2754,0.0045,CRITICO
+2026H2,subordinacao_pct,Colchão de Cota Subordinada (% PL),0.5645,0.0693,CRITICO
+2026H2,admin_loo_stress_rate,Taxa de Estresse na Administradora (LOO),2.3901,0.0929,CRITICO
+2026H2,inad_31_60_pct,Atraso 31–60 dias (% Carteira),0.0856,0.0002,ESTAVEL
+2026H2,total_enhancement_pct,Reforço Total Subord. + Mezanino (% PL),0.3586,0.045,CRITICO
+2026H2,inad_90p_vol_6m,Volatilidade 6m da Inadimplência,0.1048,0.0008,MODERADO
+2026H2,cota_fidc_cross_pct,Alocação Cruzada em Cotas de FIDCs (%),0.2011,0.0422,MODERADO
+2026H2,is_aberto,Condomínio Aberto (Resgatável),0.0358,0.0045,ESTAVEL
+2026H2,rentab_senior_3m_excess,Excesso Médio 3m Cota Sênior vs. CDI,1.1969,0.0009,CRITICO
+2026H2,alm_liq_30d_ratio,Cobertura de Liquidez 30 dias (ALM),0.0498,0.0057,ESTAVEL

@@ -1,0 +1,21 @@
+{
+  "elapsed_seconds": 19.29,
+  "total_rows": 215748,
+  "feature_count": 103,
+  "feature_families": {
+    "aging_structure": 23,
+    "forensic_accounting": 15,
+    "waterfall_liquidity": 22,
+    "originator_sector": 22,
+    "network_contagion": 10,
+    "macro_cycle": 11
+  },
+  "eligible_watchlist_rows_3m": 125308,
+  "eligible_watchlist_rows_6m": 125308,
+  "distress_3m_event_rate_eligible": 0.07061,
+  "distress_6m_event_rate_eligible": 0.12542,
+  "senior_dd_6m_event_rate_eligible": 0.05612,
+  "credit_surge_6m_event_rate_eligible": 0.07758,
+  "fidc_np_structural_share": 0.19866,
+  "shared_cedente_positive_degree_share": 0.16389
+}

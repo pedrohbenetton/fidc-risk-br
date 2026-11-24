@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Observatório de crédito em FIDCs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=9">
+</head>
+<body>
+  <div class="demo-banner" id="demo-banner" role="note" hidden>
+    <strong>Demonstração: fundos anonimizados.</strong>
+    Nomes, CNPJs e gestoras viraram códigos (Fundo A001, Gestora G01) e o patrimônio aparece em faixas. Setores e métricas são reais.
+  </div>
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+
+  <!-- COMMAND PALETTE MODAL (Ctrl+K or /) -->
+  <div class="cmd-backdrop hidden" id="cmd-backdrop">
+    <div class="cmd-modal frame-reticle">
+      <div class="cmd-input-wrap">
+        <span class="cmd-prompt">›</span>
+        <input type="text" id="cmd-input" placeholder="Buscar fundo, identificador ou gestor" autocomplete="off">
+        <kbd class="kbd-hint">Esc</kbd>
+      </div>
+      <div class="cmd-results" id="cmd-results"></div>
+    </div>
+  </div>
+
+  <!-- TOP TELEMETRY & NAVIGATION BAR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <div class="brand-mark">
+        <span class="brand-square"></span>
+        <span class="brand-code">SYS // 01</span>
+      </div>
+      <div class="brand-titles">
+        <div class="title-line">
+          <h1>Observatório de crédito em FIDCs</h1>
+          <span class="engine-tag" id="mode-indicator">Dados públicos da CVM</span>
+        </div>
+        <p class="topbar-meta" id="header-meta">Carregando dados…</p>
+      </div>
+    </div>
+
+    <div class="topbar-center">
+      <nav class="tab-nav" role="tablist">
+        <button class="tab-btn active" data-tab="radar" role="tab">
+          <span class="tab-idx">01</span> Carteira em observação
+        </button>
+        <button class="tab-btn" data-tab="contagion" role="tab">
+          <span class="tab-idx">02</span> Contágio por cedente
+        </button>
+        <button class="tab-btn" data-tab="simulator" role="tab">
+          <span class="tab-idx">03</span> Política de corte
+        </button>
+        <button class="tab-btn" data-tab="science" role="tab">
+          <span class="tab-idx">04</span> Detalhes técnicos
+        </button>
+        <a class="tab-btn tab-link" href="metodologia.html">
+          <span class="tab-idx">05</span> Metodologia
+        </a>
+      </nav>
+    </div>
+
+    <div class="topbar-right">
+      <button class="cmd-trigger" id="btn-open-cmd" type="button" title="Atalho: / ou Ctrl+K">
+        <span>Buscar fundo</span>
+        <kbd>/</kbd>
+      </button>
+    </div>
+  </header>
+
+  <!-- ARCHITECTURAL BENTO KPI STRIP -->
+  <section class="kpi-bento" id="kpi-strip">
+    <div class="kpi-cell">
+      <div class="kpi-head"><span>Patrimônio monitorado</span><span class="kpi-tag">EX-NP</span></div>
+      <strong class="kpi-value" id="kpi-pl">—</strong>
+      <span class="kpi-sub" id="kpi-live-funds">—</span>
+    </div>
+    <div class="kpi-cell kpi-highlight">
+      <div class="kpi-head"><span>Alerta de 6 meses (PR-AUC)</span><span class="kpi-tag">modelo do score</span></div>
+      <strong class="kpi-value" id="kpi-prauc">—</strong>
+      <span class="kpi-sub" id="kpi-ece">—</span>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-head"><span>Histórico analisado (fundo × mês)</span><span class="kpi-tag">DUCKDB</span></div>
+      <strong class="kpi-value" id="kpi-rows">—</strong>
+      <span class="kpi-sub" id="kpi-entities">—</span>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-head"><span>Ligações fundo–cedente</span><span class="kpi-tag">TABELA I</span></div>
+      <strong class="kpi-value" id="kpi-edges">—</strong>
+      <span class="kpi-sub" id="kpi-cedentes">—</span>
+    </div>
+    <div class="kpi-cell">
+      <div class="kpi-head"><span>Carteira com corte de risco</span><span class="kpi-tag">LAG T+2</span></div>
+      <strong class="kpi-value" id="kpi-sharpe">—</strong>
+      <span class="kpi-sub" id="kpi-cdi-pct">—</span>
+    </div>
+  </section>
+
+  <!-- MAIN WORKSPACE -->
+  <main class="workspace">
+    <!-- ==================== TAB 01: RADAR & DOSSIER ==================== -->
+    <section class="tab-panel active" id="tab-radar">
+      <div class="radar-bento">
+        <!-- LEFT: WATCHLIST MATRIX -->
+        <div class="terminal-panel watchlist-panel frame-reticle">
+          <div class="panel-header">
+            <div>
+              <span class="eyebrow">Competência mais recente</span>
+              <h2>Fundos com maior risco de estresse em 6 meses</h2>
+            </div>
+            <div class="count-readout" id="watchlist-count">— fundos</div>
+          </div>
+
+          <div class="filter-bar">
+            <div class="input-icon-wrap">
+              <span class="input-prefix">⌕</span>
+              <input type="search" id="search-input" placeholder="Filtrar por fundo ou gestor" aria-label="Filtrar fundo">
+            </div>
+            <select id="sector-filter" aria-label="Filtrar por setor">
+              <option value="">Todos os segmentos</option>
+            </select>
+            <select id="condom-filter" aria-label="Filtrar por condomínio">
+              <option value="all">Abertos e fechados</option>
+              <option value="open">Só abertos</option>
+              <option value="closed">Só fechados</option>
+            </select>
+            <select id="sort-select" aria-label="Ordenar por">
+              <option value="prob_6m">Maior risco em 6 meses</option>
+              <option value="va_width">Maior incerteza do score</option>
+              <option value="recompra_idx">Mais recompras</option>
+              <option value="contagion_pct">Mais exposição a cedentes</option>
+              <option value="pl_m">Maior patrimônio</option>
+            </select>
+          </div>
+
+          <div class="table-scroll">
+            <table class="data-table" id="watchlist-table">
+              <thead>
+                <tr>
+                  <th>Fundo</th>
+                  <th>Segmento</th>
+                  <th class="num">PL (R$ mi)</th>
+                  <th class="num">Estresse em 6m</th>
+                  <th class="num">Régua de atraso · 90d+</th>
+                  <th class="num">Subord.</th>
+                  <th class="num">Recompra</th>
+                </tr>
+              </thead>
+              <tbody id="watchlist-tbody"></tbody>
+            </table>
+          </div>
+          <div class="aging-legend" aria-label="Legenda da régua de atraso"><span><i style="background:var(--aging-ok)"></i>Em dia</span><span><i style="background:var(--aging-early)"></i>Atraso 1–60 dias</span><span><i style="background:var(--aging-late)"></i>61–90 dias</span><span><i style="background:var(--aging-default)"></i>Vencido 90+ dias</span></div>
+        </div>
+
+        <!-- RIGHT: FORENSIC ENTITY DOSSIER -->
+        <aside class="terminal-panel inspector-panel frame-reticle" id="fund-inspector">
+          <div class="dossier-top">
+            <div class="dossier-id-block">
+              <div class="tag-row">
+                <span class="mono-chip" id="insp-sector">—</span>
+                <span class="mono-chip chip-outline" id="insp-condom">—</span>
+              </div>
+              <h2 id="insp-name">Selecione um fundo</h2>
+              <p class="mono-meta" id="insp-meta">—</p>
+            </div>
+
+            <div class="pd-monolith">
+              <span class="pd-caption">Probabilidade de estresse em 6 meses</span>
+              <strong class="pd-big" id="insp-pd">—</strong>
+              <div class="led-meter" id="insp-led-meter" aria-hidden="true"></div>
+              <span class="va-band-text" id="insp-va-band">Faixa —</span>
+            </div>
+          </div>
+
+          <div class="telemetry-strip-6">
+            <div class="tel-cell">
+              <span>Vencido há 90+ dias</span>
+              <strong id="insp-inad90">—</strong>
+            </div>
+            <div class="tel-cell">
+              <span>Atraso de 1 a 60 dias</span>
+              <strong id="insp-early">—</strong>
+            </div>
+            <div class="tel-cell">
+              <span>Subordinação</span>
+              <strong id="insp-subord">—</strong>
+            </div>
+            <div class="tel-cell">
+              <span>Provisão (PDD)</span>
+              <strong id="insp-pdd">—</strong>
+            </div>
+            <div class="tel-cell">
+              <span>Índice de recompra</span>
+              <strong id="insp-recompra">—</strong>
+            </div>
+            <div class="tel-cell">
+              <span>Cedentes em fundos estressados</span>
+              <strong id="insp-contagion">—</strong>
+            </div>
+          </div>
+
+          <div class="sub-module">
+            <div class="module-bar">
+              <h3>Últimos 18 meses e projeção para 3 meses</h3>
+              <div class="mono-legend">
+                <span><i class="swatch sw-white"></i>90d+</span>
+                <span><i class="swatch sw-silver"></i>1–60d</span>
+                <span><i class="swatch sw-dim"></i>Subordinação</span>
+                <span><i class="swatch sw-beam"></i>Faixa provável</span>
+              </div>
+            </div>
+            <div class="canvas-hud-wrap">
+              <canvas id="trajectory-canvas" width="560" height="205"></canvas>
+              <div class="canvas-tooltip hidden" id="traj-tooltip"></div>
+            </div>
+          </div>
+
+          <div class="sub-module">
+            <div class="module-bar">
+              <h3>O que mais pesa no score</h3>
+              <span class="mono-hint">← reduz o risco · aumenta o risco →</span>
+            </div>
+            <div id="shap-bars" class="shap-bipolar"></div>
+          </div>
+
+          <div class="sub-module stress-module">
+            <div class="module-bar">
+              <h3>E se a carteira piorar?</h3>
+              <button class="btn-ghost" id="stress-reset-btn" type="button">Zerar</button>
+            </div>
+            <div class="stress-sliders">
+              <label>
+                <div class="sl-head"><span>Atraso 1–60d</span><b id="lbl-sh-early">+0,0 pp</b></div>
+                <input type="range" id="sl-sh-early" min="0" max="15" step="0.5" value="0">
+              </label>
+              <label>
+                <div class="sl-head"><span>Subordinação</span><b id="lbl-sh-subord">0,0 pp</b></div>
+                <input type="range" id="sl-sh-subord" min="-15" max="5" step="0.5" value="0">
+              </label>
+              <label>
+                <div class="sl-head"><span>Cedentes estressados</span><b id="lbl-sh-cont">+0,0 pp</b></div>
+                <input type="range" id="sl-sh-cont" min="0" max="20" step="1" value="0">
+              </label>
+            </div>
+            <div class="stress-readout" id="stress-result">
+              Mova os controles para simular um choque.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 02: CONTAGION TOPOLOGY ==================== -->
+    <section class="tab-panel" id="tab-contagion">
+      <div class="contagion-bento">
+        <div class="terminal-panel frame-reticle">
+          <div class="panel-header">
+            <div>
+              <span class="eyebrow">Tabela I da CVM · 18 maiores cedentes</span>
+              <h2>Fundos que dividem os mesmos cedentes</h2>
+            </div>
+            <div class="graph-controls">
+              <label class="inline-ctrl">
+                <span>Risco mínimo: <b id="lbl-graph-minpd">0%</b></span>
+                <input type="range" id="sl-graph-minpd" min="0" max="35" step="1" value="0">
+              </label>
+              <button class="btn-ghost" id="btn-graph-recenter" type="button">Recentralizar</button>
+            </div>
+          </div>
+
+          <div class="graph-stage">
+            <canvas id="contagion-canvas" width="900" height="560"></canvas>
+            <div class="canvas-tooltip hidden" id="graph-tooltip"></div>
+            <div class="graph-hud-footer">
+              <span><i class="glyph-diamond"></i>Cedente compartilhado</span>
+              <span><i class="glyph-ring-crit"></i>Risco alto (≥ 20%)</span>
+              <span><i class="glyph-dot-mid"></i>Atenção (8–20%)</span>
+              <span><i class="glyph-dot-low"></i>Normal (&lt; 8%)</span>
+              <span class="hud-right">Role para aproximar · clique para ver vizinhos</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="terminal-panel frame-reticle">
+          <span class="eyebrow">Por onde o problema pode passar</span>
+          <h2>Vizinhança selecionada</h2>
+          <p class="panel-desc" id="node-subtitle">Clique em um fundo ou cedente no grafo para ver com quem ele divide exposição.</p>
+          <div id="node-details-body" class="node-details-body"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 03: ALLOCATION & FRONTIER ==================== -->
+    <section class="tab-panel" id="tab-simulator">
+      <div class="sim-bento-top">
+        <div class="terminal-panel frame-reticle">
+          <span class="eyebrow">Backtest 2022–2026</span>
+          <h2>A partir de que risco sair do fundo?</h2>
+          <p class="panel-desc">Escolha o corte de risco e quanto custa uma quebra não evitada em relação a um alarme falso. O resultado é fora da amostra e respeita o prazo de resgate (t+2).</p>
+
+          <div class="sim-sliders">
+            <label>
+              <div class="sl-head"><span>Corte de risco em 6 meses</span><b id="lbl-sim-tau">10,0%</b></div>
+              <input type="range" id="sl-sim-tau" min="0.02" max="0.55" step="0.02" value="0.10">
+            </label>
+            <label>
+              <div class="sl-head"><span>Custo de uma quebra ÷ custo de um alarme falso</span><b id="lbl-sim-cost">10×</b></div>
+              <input type="range" id="sl-sim-cost" min="2" max="30" step="1" value="10">
+            </label>
+          </div>
+
+          <div class="confusion-matrix-4" id="sim-confusion-grid"></div>
+          <div class="optimal-hud" id="sim-optimal-callout"></div>
+        </div>
+
+        <div class="terminal-panel frame-reticle">
+          <div class="panel-header">
+            <div>
+              <span class="eyebrow">Cotas sênior de fundos abertos</span>
+              <h2>Resultado acumulado (base 100 = jan/2022)</h2>
+            </div>
+            <label class="mono-toggle">
+              <input type="checkbox" id="chk-show-frictionless">
+              <span>Mostrar referência sem atraso de resgate</span>
+            </label>
+          </div>
+          <div class="canvas-hud-wrap">
+            <canvas id="wealth-canvas" width="760" height="295"></canvas>
+            <div class="canvas-tooltip hidden" id="wealth-tooltip"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="terminal-panel frame-reticle">
+        <div class="panel-header">
+          <div>
+            <span class="eyebrow">Comparação com o CDI (BCB, série 4391)</span>
+            <h2>Desempenho de cada política</h2>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table class="data-table" id="portfolio-table">
+            <thead>
+              <tr>
+                <th>Política</th>
+                <th class="num">Acumulado</th>
+                <th class="num">% do CDI</th>
+                <th class="num">Retorno a.a.</th>
+                <th class="num">Alfa vs CDI</th>
+                <th class="num">Vol. a.a.</th>
+                <th class="num">Sharpe*</th>
+                <th class="num">Sortino</th>
+                <th class="num">Queda máx.</th>
+                <th class="num">CVaR 95%</th>
+                <th class="num">Choques</th>
+              </tr>
+            </thead>
+            <tbody id="portfolio-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 04: SCIENTIFIC TELEMETRY ==================== -->
+    <section class="tab-panel" id="tab-science">
+      <div class="science-bento">
+        <div class="terminal-panel frame-reticle">
+          <div class="panel-header">
+            <div>
+              <span class="eyebrow">Avaliação walk-forward com embargo de 6 meses</span>
+              <h2>Comparação entre modelos</h2>
+            </div>
+            <select id="regime-select" aria-label="Selecionar janela temporal">
+              <option value="pooled">2022–2026 consolidado (98.261 obs.)</option>
+              <option value="fold_2022">2022 · alta da Selic</option>
+              <option value="fold_2023">2023 · crise corporativa</option>
+              <option value="fold_2024">2024 · transição RCVM 175</option>
+              <option value="fold_2025_2026">2025–26 · juros restritivos</option>
+            </select>
+          </div>
+          <div class="table-scroll">
+            <table class="data-table" id="benchmark-table">
+              <thead>
+                <tr>
+                  <th>Modelo</th>
+                  <th class="num">PR-AUC</th>
+                  <th class="num">ROC-AUC</th>
+                  <th class="num">Brier</th>
+                  <th class="num">ECE</th>
+                  <th class="num">Recall@5%</th>
+                  <th class="num">Lift@5%</th>
+                </tr>
+              </thead>
+              <tbody id="benchmark-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="terminal-panel frame-reticle">
+          <span class="eyebrow">Ablação por família de variáveis</span>
+          <h2>O que cada grupo de sinais acrescenta</h2>
+          <p class="panel-desc">Sinais do próprio fundo e da rede de cedentes elevam o PR-AUC de 0,2858 para 0,3575. Séries macro em nível pioram o resultado (−1,60 p.p.) porque o modelo passa a usá-las como relógio, não como sinal.</p>
+          <canvas id="ablation-canvas" width="580" height="245"></canvas>
+        </div>
+
+        <div class="terminal-panel frame-reticle">
+          <span class="eyebrow">Testes exatos de Fisher em fundos aparentemente saudáveis (&lt; 3% vencido)</span>
+          <h2>Sinais que aparecem antes da ruptura</h2>
+          <div class="forensic-cards" id="forensic-cards"></div>
+          <canvas id="event-study-canvas" width="580" height="215"></canvas>
+        </div>
+
+        <div class="terminal-panel frame-reticle">
+          <span class="eyebrow">Calibração e estabilidade</span>
+          <h2>O score diz o que promete?</h2>
+          <div class="dual-mini-canvases">
+            <canvas id="reliability-canvas" width="280" height="235"></canvas>
+            <div class="drift-mini-wrap">
+              <div class="drift-head">Variáveis que mais mudaram de distribuição (PSI semestral)</div>
+              <div id="drift-list" class="drift-list"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Ferramenta de monitoramento. Não é recomendação de investimento.</span>
+    <span>Fontes: CVM, Informe Mensal de FIDC (dados abertos) e Banco Central (SGS)</span>
+  </footer>
+
+  <script src="app.js?v=10"></script>
+</body>
+</html>

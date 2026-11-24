@@ -1,0 +1,9 @@
+# Binários: nunca converter fins de linha (core.autocrlf no Windows corromperia PDFs).
+*.pdf binary
+*.png binary
+*.jpg binary
+*.zip binary
+*.parquet binary
+*.pkl binary
+*.pt binary
+tests/fixtures/**/*.txt -text

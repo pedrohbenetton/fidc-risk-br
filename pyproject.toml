@@ -1,0 +1,92 @@
+[project]
+name = "fidc-risk-br"
+version = "1.0.0"
+description = "Lakehouse, rede de contágio de crédito em GPU, previsão quantílica conformal e alocação sob incerteza para os Fundos de Investimento em Direitos Creditórios (FIDCs) no Brasil."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+authors = [
+    { name = "pedrohbenetton" }
+]
+dependencies = [
+    "duckdb>=1.1.0",
+    "pyarrow>=18.0.0",
+    "pandas>=2.2.0",
+    "numpy>=2.0.0",
+    "scipy>=1.14.0",
+    "scikit-learn>=1.5.0",
+    "lightgbm>=4.5.0",
+    "catboost>=1.2.7",
+    "shap>=0.46.0",
+    "torch>=2.5.0,<2.7",
+    "httpx>=0.27.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.32.0",
+    "pydantic>=2.9.0",
+    "matplotlib>=3.9.0",
+    "reportlab>=4.2.0",
+    "pymupdf>=1.24.0",
+    "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-cov>=5.0.0",
+    "ruff>=0.7.0",
+    "mypy>=1.13.0",
+]
+
+[project.scripts]
+fidc-risk = "fidc_risk.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fidc_risk"]
+
+[tool.uv.sources]
+# CUDA no Windows (GPU local); wheel CPU no Linux (runners do GitHub Actions, sem GPU).
+torch = [
+    { index = "pytorch-cu124", marker = "sys_platform == 'win32'" },
+    { index = "pytorch-cpu", marker = "sys_platform != 'win32'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests", "."]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "-q --strict-markers"
+filterwarnings = [
+    # Starlette sugere httpx2 no TestClient; httpx atual segue suportado.
+    "ignore:Using `httpx` with `starlette.testclient` is deprecated",
+    # Aviso informativo do SHAP; o codigo ja trata saida em lista e em ndarray.
+    "ignore:LightGBM binary classifier with TreeExplainer shap values output has changed:UserWarning",
+]
+
+[tool.mypy]
+python_version = "3.12"
+mypy_path = "src"
+ignore_missing_imports = true
+check_untyped_defs = true
+warn_unused_ignores = true

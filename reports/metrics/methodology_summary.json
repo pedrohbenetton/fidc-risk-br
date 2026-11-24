@@ -1,0 +1,520 @@
+{
+ "modelo": "o mesmo que gera o score ao vivo",
+ "coluna_score": "prob_lgbm_mono_va",
+ "ultima_competencia": "2026-10",
+ "baixado_em": "18/11/2026",
+ "definicoes": {
+  "horizonte_meses": 6,
+  "queda_senior_acumulada_pct": -2.0,
+  "queda_senior_mensal_pct": -1.5,
+  "salto_estoque_ruim_pp": 5.0,
+  "estoque_ruim_minimo_pct": 12.0,
+  "folga_subordinacao_pp": 2.0,
+  "elegivel_pl_minimo_mi": 5.0,
+  "elegivel_carteira_minima_mi": 2.0,
+  "elegivel_estoque_ruim_maximo_pct": 20.0,
+  "estresse_agudo_queda_senior_mes_pct": -2.0,
+  "estresse_agudo_estoque_ruim_pct": 15.0
+ },
+ "avaliacao": {
+  "inicio": "2022-01",
+  "fim": "2026-04",
+  "n_obs": 84091,
+  "eventos": 10948,
+  "taxa_eventos": 0.130192291684009
+ },
+ "fora_por_janela_incompleta": {
+  "n_obs": 14170,
+  "inicio": "2026-05",
+  "fim": "2026-09",
+  "taxa_eventos_parcial": 0.09181369089625971
+ },
+ "por_safra": [
+  {
+   "ano": 2022,
+   "rotulo": "2022",
+   "inicio": "2022-01",
+   "fim": "2022-12",
+   "n_obs": 11545,
+   "eventos": 1693,
+   "taxa_eventos": 0.1466435686444348,
+   "score_medio": 0.1001611443232986,
+   "acerto_ordenacao": 0.737642867540605,
+   "concentracao_top5": 3.9169427543089093,
+   "eventos_no_top5": 0.1961015948021264,
+   "erro_calibracao": 0.04873927226857218,
+   "calibracao": [
+    {
+     "previsto": 0.021836770904802107,
+     "observado": 0.01951951951951952,
+     "n": 666
+    },
+    {
+     "previsto": 0.04798786002941497,
+     "observado": 0.04498525073746313,
+     "n": 1356
+    },
+    {
+     "previsto": 0.04929873729824802,
+     "observado": 0.09027777777777778,
+     "n": 1008
+    },
+    {
+     "previsto": 0.054821447117799925,
+     "observado": 0.049738219895287955,
+     "n": 764
+    },
+    {
+     "previsto": 0.08161802718746067,
+     "observado": 0.10065543071161048,
+     "n": 4272
+    },
+    {
+     "previsto": 0.14788173969229712,
+     "observado": 0.21212121212121213,
+     "n": 99
+    },
+    {
+     "previsto": 0.18398117349733575,
+     "observado": 0.30739644970414204,
+     "n": 3380
+    }
+   ]
+  },
+  {
+   "ano": 2023,
+   "rotulo": "2023",
+   "inicio": "2023-01",
+   "fim": "2023-12",
+   "n_obs": 13912,
+   "eventos": 1884,
+   "taxa_eventos": 0.13542265669925244,
+   "score_medio": 0.15450707487243565,
+   "acerto_ordenacao": 0.75302973175824,
+   "concentracao_top5": 4.158967225516753,
+   "eventos_no_top5": 0.208067940552017,
+   "erro_calibracao": 0.025572020679880042,
+   "calibracao": [
+    {
+     "previsto": 0.021775792818006984,
+     "observado": 0.033707865168539325,
+     "n": 712
+    },
+    {
+     "previsto": 0.02961754798913228,
+     "observado": 0.041586073500967116,
+     "n": 2068
+    },
+    {
+     "previsto": 0.07672492436262354,
+     "observado": 0.06462035541195477,
+     "n": 1238
+    },
+    {
+     "previsto": 0.08158885413724719,
+     "observado": 0.056006493506493504,
+     "n": 1232
+    },
+    {
+     "previsto": 0.09090859115414067,
+     "observado": 0.09085580304806565,
+     "n": 1706
+    },
+    {
+     "previsto": 0.12946709468291637,
+     "observado": 0.0890937019969278,
+     "n": 1302
+    },
+    {
+     "previsto": 0.1570303547488663,
+     "observado": 0.1254180602006689,
+     "n": 1196
+    },
+    {
+     "previsto": 0.17167684575961362,
+     "observado": 0.1182089552238806,
+     "n": 1675
+    },
+    {
+     "previsto": 0.26447009312248543,
+     "observado": 0.24517684887459806,
+     "n": 1244
+    },
+    {
+     "previsto": 0.4868239224703518,
+     "observado": 0.4554905782975958,
+     "n": 1539
+    }
+   ]
+  },
+  {
+   "ano": 2024,
+   "rotulo": "2024",
+   "inicio": "2024-01",
+   "fim": "2024-12",
+   "n_obs": 19483,
+   "eventos": 1936,
+   "taxa_eventos": 0.0993686803880306,
+   "score_medio": 0.1262891725358546,
+   "acerto_ordenacao": 0.7960682749564688,
+   "concentracao_top5": 4.954354736172918,
+   "eventos_no_top5": 0.24793388429752067,
+   "erro_calibracao": 0.026920492147824014,
+   "calibracao": [
+    {
+     "previsto": 0.019823060697180806,
+     "observado": 0.0019059720457433292,
+     "n": 1574
+    },
+    {
+     "previsto": 0.02219886276209904,
+     "observado": 0.019801980198019802,
+     "n": 2323
+    },
+    {
+     "previsto": 0.04048179527962419,
+     "observado": 0.03335318642048839,
+     "n": 1679
+    },
+    {
+     "previsto": 0.06278449651221059,
+     "observado": 0.044654939106901215,
+     "n": 2217
+    },
+    {
+     "previsto": 0.08309527643714318,
+     "observado": 0.06707317073170732,
+     "n": 164
+    },
+    {
+     "previsto": 0.08714431886534134,
+     "observado": 0.050500454959053684,
+     "n": 2198
+    },
+    {
+     "previsto": 0.09911113879485854,
+     "observado": 0.08607169529499627,
+     "n": 5356
+    },
+    {
+     "previsto": 0.23679901896383612,
+     "observado": 0.17108050847457626,
+     "n": 1888
+    },
+    {
+     "previsto": 0.4738357410506622,
+     "observado": 0.3963531669865643,
+     "n": 2084
+    }
+   ]
+  },
+  {
+   "ano": 2025,
+   "rotulo": "2025",
+   "inicio": "2025-01",
+   "fim": "2025-12",
+   "n_obs": 28253,
+   "eventos": 3644,
+   "taxa_eventos": 0.12897745372172867,
+   "score_medio": 0.10920792875037497,
+   "acerto_ordenacao": 0.7788133298309156,
+   "concentracao_top5": 4.049490655610479,
+   "eventos_no_top5": 0.20252469813391877,
+   "erro_calibracao": 0.02263891560314297,
+   "calibracao": [
+    {
+     "previsto": 0.004664808304263867,
+     "observado": 0.01937046004842615,
+     "n": 2478
+    },
+    {
+     "previsto": 0.019679156154735915,
+     "observado": 0.024975024975024976,
+     "n": 1001
+    },
+    {
+     "previsto": 0.03306796231369386,
+     "observado": 0.048167222053923056,
+     "n": 3301
+    },
+    {
+     "previsto": 0.04609013229177182,
+     "observado": 0.05151673640167364,
+     "n": 3824
+    },
+    {
+     "previsto": 0.06961272879025097,
+     "observado": 0.043609933373712904,
+     "n": 1651
+    },
+    {
+     "previsto": 0.07823722173465596,
+     "observado": 0.09173212621488483,
+     "n": 7511
+    },
+    {
+     "previsto": 0.1179780775149011,
+     "observado": 0.1595667870036101,
+     "n": 2770
+    },
+    {
+     "previsto": 0.2193644728445498,
+     "observado": 0.21103526734926054,
+     "n": 1758
+    },
+    {
+     "previsto": 0.3419487157250691,
+     "observado": 0.414498610760293,
+     "n": 3959
+    }
+   ]
+  },
+  {
+   "ano": 2026,
+   "rotulo": "2026 (jan–abr)",
+   "inicio": "2026-01",
+   "fim": "2026-04",
+   "n_obs": 10898,
+   "eventos": 1791,
+   "taxa_eventos": 0.16434208111580106,
+   "score_medio": 0.12812791443614724,
+   "acerto_ordenacao": 0.7652776835141386,
+   "concentracao_top5": 3.315974367249089,
+   "eventos_no_top5": 0.1658291457286432,
+   "erro_calibracao": 0.036214166679653825,
+   "calibracao": [
+    {
+     "previsto": 0.0048845168921094785,
+     "observado": 0.017958412098298678,
+     "n": 1058
+    },
+    {
+     "previsto": 0.020053845282755462,
+     "observado": 0.020761245674740483,
+     "n": 289
+    },
+    {
+     "previsto": 0.03523739144882846,
+     "observado": 0.06385281385281386,
+     "n": 1848
+    },
+    {
+     "previsto": 0.062124053796957415,
+     "observado": 0.07600434310532031,
+     "n": 921
+    },
+    {
+     "previsto": 0.07772759546356323,
+     "observado": 0.10115864527629234,
+     "n": 2244
+    },
+    {
+     "previsto": 0.11892907476759013,
+     "observado": 0.19224683544303797,
+     "n": 1264
+    },
+    {
+     "previsto": 0.21722402119585452,
+     "observado": 0.22037037037037038,
+     "n": 1080
+    },
+    {
+     "previsto": 0.23167797133733964,
+     "observado": 0.2981243830207305,
+     "n": 1013
+    },
+    {
+     "previsto": 0.39712182543557484,
+     "observado": 0.4809483488569009,
+     "n": 1181
+    }
+   ]
+  }
+ ],
+ "erros": {
+  "total": {
+   "eventos": 10948,
+   "eventos_no_top5": 0.2045122396784801,
+   "eventos_no_top20": 0.5270369017172086,
+   "eventos_abaixo_da_mediana": 0.1412130069419072,
+   "alarmes_falsos_top5": 0.4677917756120751
+  },
+  "por_segmento": [
+   {
+    "segmento": "Multicarteira",
+    "n_obs": 37533,
+    "eventos": 4796,
+    "taxa_eventos": 0.12778088615351824,
+    "eventos_no_top20": 0.47039199332777315,
+    "eventos_abaixo_da_mediana": 0.1530442035029191
+   },
+   {
+    "segmento": "Comercial/Varejo",
+    "n_obs": 21526,
+    "eventos": 3022,
+    "taxa_eventos": 0.14038836755551426,
+    "eventos_no_top20": 0.587028457974851,
+    "eventos_abaixo_da_mediana": 0.12806088682991396
+   },
+   {
+    "segmento": "Serviços",
+    "n_obs": 5009,
+    "eventos": 725,
+    "taxa_eventos": 0.1447394689558794,
+    "eventos_no_top20": 0.5324137931034483,
+    "eventos_abaixo_da_mediana": 0.12413793103448276
+   },
+   {
+    "segmento": "Industrial",
+    "n_obs": 4779,
+    "eventos": 617,
+    "taxa_eventos": 0.12910650763758108,
+    "eventos_no_top20": 0.6158833063209076,
+    "eventos_abaixo_da_mediana": 0.1458670988654781
+   },
+   {
+    "segmento": "Público/Judicial",
+    "n_obs": 5987,
+    "eventos": 611,
+    "taxa_eventos": 0.10205445131117422,
+    "eventos_no_top20": 0.5188216039279869,
+    "eventos_abaixo_da_mediana": 0.058919803600654665
+   },
+   {
+    "segmento": "Agronegócio",
+    "n_obs": 2582,
+    "eventos": 371,
+    "taxa_eventos": 0.14368706429124709,
+    "eventos_no_top20": 0.5660377358490566,
+    "eventos_abaixo_da_mediana": 0.14555256064690028
+   },
+   {
+    "segmento": "Crédito Pessoal",
+    "n_obs": 1060,
+    "eventos": 223,
+    "taxa_eventos": 0.21037735849056605,
+    "eventos_no_top20": 0.5695067264573991,
+    "eventos_abaixo_da_mediana": 0.10762331838565023
+   },
+   {
+    "segmento": "Consignado",
+    "n_obs": 1215,
+    "eventos": 213,
+    "taxa_eventos": 0.17530864197530865,
+    "eventos_no_top20": 0.676056338028169,
+    "eventos_abaixo_da_mediana": 0.14084507042253522
+   },
+   {
+    "segmento": "Cartões",
+    "n_obs": 1999,
+    "eventos": 124,
+    "taxa_eventos": 0.062031015507753876,
+    "eventos_no_top20": 0.3790322580645161,
+    "eventos_abaixo_da_mediana": 0.4596774193548387
+   },
+   {
+    "segmento": "Corporativo",
+    "n_obs": 1247,
+    "eventos": 119,
+    "taxa_eventos": 0.0954290296712109,
+    "eventos_no_top20": 0.5798319327731093,
+    "eventos_abaixo_da_mediana": 0.10084033613445378
+   },
+   {
+    "segmento": "Imobiliário",
+    "n_obs": 854,
+    "eventos": 63,
+    "taxa_eventos": 0.07377049180327869,
+    "eventos_no_top20": 0.5714285714285714,
+    "eventos_abaixo_da_mediana": 0.15873015873015872
+   },
+   {
+    "segmento": "Factoring",
+    "n_obs": 169,
+    "eventos": 32,
+    "taxa_eventos": 0.1893491124260355,
+    "eventos_no_top20": 0.65625,
+    "eventos_abaixo_da_mediana": 0.0625
+   },
+   {
+    "segmento": "Veículos",
+    "n_obs": 131,
+    "eventos": 32,
+    "taxa_eventos": 0.24427480916030533,
+    "eventos_no_top20": 0.09375,
+    "eventos_abaixo_da_mediana": 0.625
+   }
+  ]
+ },
+ "perfil_erros": {
+  "vistos": {
+   "eventos": 5770,
+   "so_queda_cota_senior": 0.24956672443674177,
+   "so_salto_inadimplencia": 0.6672443674176777,
+   "ambos": 0.0831889081455806,
+   "mediana_vencido90_em_t": 0.024930870418000746,
+   "mediana_atraso_1_60_em_t": 0.03410754746044016,
+   "mediana_subordinacao_em_t": 0.35424083476474466
+  },
+  "nao_vistos": {
+   "eventos": 5178,
+   "so_queda_cota_senior": 0.5305137118578602,
+   "so_salto_inadimplencia": 0.4171494785631518,
+   "ambos": 0.05233680957898803,
+   "mediana_vencido90_em_t": 0.0,
+   "mediana_atraso_1_60_em_t": 0.0,
+   "mediana_subordinacao_em_t": 0.31654702563545883
+  }
+ },
+ "nivel_modelo_servido": {
+  "por_mes": [
+   {
+    "mes": "2025-10",
+    "n_obs": 2545,
+    "score_medio": 0.07534257639526624,
+    "taxa_eventos": 0.1544204322200393
+   },
+   {
+    "mes": "2025-11",
+    "n_obs": 2594,
+    "score_medio": 0.07599793040891858,
+    "taxa_eventos": 0.1576715497301465
+   },
+   {
+    "mes": "2025-12",
+    "n_obs": 2666,
+    "score_medio": 0.09814762777880962,
+    "taxa_eventos": 0.15528882220555137
+   },
+   {
+    "mes": "2026-01",
+    "n_obs": 2698,
+    "score_medio": 0.10659617100078343,
+    "taxa_eventos": 0.15826538176426982
+   },
+   {
+    "mes": "2026-02",
+    "n_obs": 2691,
+    "score_medio": 0.10548883705669237,
+    "taxa_eventos": 0.16202155332590115
+   },
+   {
+    "mes": "2026-03",
+    "n_obs": 2736,
+    "score_medio": 0.10785034617949608,
+    "taxa_eventos": 0.16593567251461988
+   }
+  ],
+  "n_obs": 15930,
+  "score_medio": 0.0952349366661499,
+  "taxa_eventos": 0.15900816070307597,
+  "meses": [
+   "2025-10",
+   "2026-03"
+  ],
+  "calibracao": [
+   "2026-04",
+   "2026-09"
+  ]
+ }
+}

@@ -1,0 +1,44 @@
+name: Pages (demo anonimizado)
+
+# Publica o observatório no GitHub Pages a partir de web/, cujo pacote versionado é o anonimizado
+# (Fundo A001, Gestora G01, PL em faixas). O build falha se achar CNPJ ou nome que não seja código.
+
+on:
+  push:
+    branches: [main]
+    paths: ["web/**", "src/fidc_risk/export/demo.py", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+      - run: uv python install 3.12 && uv sync
+      - name: Build do site (falha em qualquer CNPJ ou nome real)
+        run: uv run fidc-risk build-pages --out _site
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

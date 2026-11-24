@@ -1,0 +1,105 @@
+@pedrohbenetton · Boletim FIDC · outubro/2026
+1/2
+@pedrohbenetton · Boletim de crédito em FIDCs
+Outubro de 2026: o atraso curto subiu, e o segmento
+financeiro concentra o problema
+Indústria inteira, a partir dos informes mensais entregues à CVM. Nenhum fundo é identificado.
+Destaques
+• O patrimônio da indústria chegou a R$ 1.003,5 bi (+12,1% em 12 meses), com 4.335 classes reportando.
+• O vencido acima de 90 dias ficou em 5,91% da carteira, estável no mês (+0,02 p.p.) e +0,63 p.p. em 12 meses. O atraso
+acima de 30 dias subiu +0,22 p.p. no mês: é a faixa que costuma anteceder a de 90 dias.
+• A provisão subiu para 9,18% da carteira (+1,81 p.p. em 12 meses), acima do próprio vencido de 90+ dias.
+• O segmento financeiro (crédito pessoal, consignado, corporativo, veículos), com R$ 313 bi, tem 10,3% vencido há mais de
+90 dias, cerca de 1,7 vezes a média.
+• As recompras pelo cedente caíram para R$ 1.866 mi (0,24% da carteira), contra R$ 3.130 mi há um ano. Menos recompra
+com mais atraso pode indicar cedentes com menos fôlego para honrar coobrigação.
+Painel do mês
+Indicador
+out/26
+set/26
+out/25
+No mês
+Em 12 meses
+Patrimônio líquido (R$ bi)
+1.003,5
+992,9
+895,0
++1,1%
++12,1%
+Classes com informe
+4.335
+4.275
+3.734
++1,4%
++16,1%
+Carteira de direitos creditórios (R$ bi)
+788,2
+773,8
+663,9
++1,9%
++18,7%
+Vencido > 30 dias (% carteira)
+7,24
+7,02
+6,17
++0,22 p.p.
++1,07 p.p.
+Vencido > 90 dias (% carteira)
+5,91
+5,89
+5,28
++0,02 p.p.
++0,63 p.p.
+Vencido > 180 dias (% carteira)
+4,75
+4,77
+4,51
+−0,02 p.p.
++0,24 p.p.
+Provisão (PDD) / carteira (%)
+9,18
+8,93
+7,37
++0,25 p.p.
++1,81 p.p.
+Classes com > 10% vencido há 90+ dias
+553 (16,4%)
+560 (16,9%)
+437 (15,1%)
+−0,49 p.p.
++1,32 p.p.
+Recompras pelo cedente (R$ mi)
+1.866
+1.823
+3.130
++2,4%
+−40,4%
+Vencido há mais de 90 dias, por segmento dominante da carteira
+Cada classe foi atribuída ao segmento com maior valor na sua carteira. Rótulo: % vencido 90+ dias · tamanho da carteira. Segmentos com menos de R$ 3
+bi omitidos.
+@pedrohbenetton · Boletim FIDC · outubro/2026
+2/2
+Concentração do risco
+A média esconde a cauda: a maioria das classes não tem atraso relevante, mas 553 classes (16,4%) têm mais de 10% da
+carteira vencida há mais de 90 dias. É nesse grupo que um comitê precisa olhar primeiro.
+Número de classes por faixa de vencido 90+ dias (% da carteira). Em cinza,
+as faixas acima de 10%.
+Fluxos de outubro. Captação líquida de resgates e amortizações: R$ 1,2 bi.
+Contágio por cedente
+Os informes listam os maiores cedentes de cada classe. Em outubro, 2.615 empresas cedentes apareceram nessas listas;
+304 cedem para duas ou mais classes ao mesmo tempo. Dessas, 122 estão presentes em pelo menos uma classe sob
+estresse (mais de 10% vencido 90+ dias). 360 classes ainda sem estresse, somando R$ 65,3 bi de patrimônio, dividem ao
+menos um desses cedentes. Se o problema estiver no cedente, e não na carteira de um fundo só, ele pode aparecer nos
+outros: esse é o canal de transmissão que a análise fundo a fundo não enxerga.
+O que acompanhar em novembro
+• Se o atraso de 31 a 90 dias migra para a faixa de 90+, principalmente no segmento financeiro.
+• Se as recompras seguem caindo enquanto o atraso sobe.
+• Quantas das classes expostas por cedente comum passam a mostrar atraso próprio.
+Metodologia e limites
+Fonte: Informe Mensal de FIDC (CVM, dados abertos), competências 10/2026, 09/2026 e 10/2025, baixadas em 22/11/2026. Vencido por faixa: soma das
+tabelas V e VI (com e sem aquisição substancial de riscos) sobre a carteira a vencer + vencida. Provisão: redução ao valor recuperável (tabela I).
+Recompras: tabela VII. Cedentes: até 9 maiores cedentes por classe (tabela I), só pessoas jurídicas. O patrimônio inclui fundos que investem em cotas de
+outros FIDCs e por isso tem dupla contagem; a carteira de direitos creditórios não. Informes podem ser reenviados e corrigidos pela CVM após a data de
+extração. O percentual de subordinação foi omitido: a série mudou de padrão após a RCVM 175 e não é comparável no tempo.
+Aviso. Material informativo com estatísticas agregadas de dados públicos. Não é recomendação de investimento, não analisa nem cita fundos ou
+emissores específicos e não substitui a análise de cada investidor.

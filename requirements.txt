@@ -1,0 +1,7 @@
+# Dependências do boletim mensal e dos relatórios em PDF (pasta relatorio/).
+# O projeto completo (pipeline, modelos, API) é instalado pelo pyproject.toml com `uv sync --extra dev`;
+# este arquivo serve para quem só quer gerar os PDFs: `pip install -r requirements.txt`.
+pandas>=2.2.0
+matplotlib>=3.9.0
+reportlab>=4.2.0
+pymupdf>=1.24.0

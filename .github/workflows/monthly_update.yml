@@ -1,0 +1,52 @@
+name: Monthly CVM & BCB Refresh
+
+# Roda o pipeline com os dados novos da CVM e gera o build demo anonimizado como artefato do workflow.
+# Não publica nada: o pacote nominal (data/private/) fica só no runner, e o demo publicado (GitHub Pages) sai
+# do web/ versionado, gerado num build local (ver README). Os códigos dos fundos (Fundo A001...) só são estáveis
+# no build local, que guarda o mapeamento em data/private/demo_codes.json; aqui eles são gerados do zero.
+
+on:
+  schedule:
+    # Dia 18 de cada mês às 09:00 UTC (após o prazo regulatório de 15 dias do INF_MENSAL_FIDC na CVM)
+    - cron: "0 9 18 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh-observatory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv & Python 3.12
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+
+      - name: Sync environment
+        run: |
+          uv python install 3.12
+          uv sync
+
+      - name: Run Medallion pipeline & export bundles
+        run: |
+          uv run fidc-risk ingest
+          uv run fidc-risk silver
+          uv run fidc-risk gold
+          uv run fidc-risk train-tabular
+          uv run fidc-risk train-rollrate
+          uv run fidc-risk backtest-allocation
+          uv run fidc-risk export-web
+
+      - name: Build anonymized demo (fails on any CNPJ or real name)
+        run: uv run fidc-risk export-demo --out dist/demo
+
+      - name: Upload demo build
+        uses: actions/upload-artifact@v4
+        with:
+          name: observatorio-demo
+          path: dist/demo/
+          retention-days: 30

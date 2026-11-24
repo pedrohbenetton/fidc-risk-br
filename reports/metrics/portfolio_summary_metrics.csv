@@ -1,0 +1,8 @@
+policy,severe_monthly_shocks_suffered,months,cumulative_return_pct,cdi_cumulative_pct,pct_of_cdi,cagr_aa_pct,excess_over_cdi_aa_pp,volatility_aa_pct,sharpe_ratio,sortino_ratio,max_drawdown_pct,cvar_95_monthly_pct
+benchmark_cdi,0,56,77.2,77.2,100.0,13.04,0.0,0.44,0.0,0.0,0.0,0.79
+equal_weight_senior,57,56,97.49,77.2,126.3,15.7,2.66,0.67,4.266,9.246,0.0,0.69
+yield_chasing_top25,8,56,121.33,77.2,157.2,18.56,5.52,0.68,10.402,19.298,0.0,1.01
+traditional_committee,1,56,109.31,77.2,141.6,17.15,4.11,0.53,11.923,14.443,0.0,1.01
+ml_watchlist_cutoff,5,56,121.78,77.2,157.7,18.61,5.57,0.73,11.066,19.475,0.0,1.01
+cvar_venn_abers_lagged,3,56,118.33,77.2,153.3,18.21,5.17,0.71,11.267,18.113,0.0,1.0
+cvar_venn_abers_frictionless_t1,3,56,117.47,76.66,153.2,18.11,5.15,0.65,14.667,18.035,0.0,1.07

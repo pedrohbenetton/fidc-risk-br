@@ -1,0 +1,143 @@
+{
+  "elapsed_seconds": 5.94,
+  "forensic_tests": {
+    "h1_recompra_masking": {
+      "n_clean": 90683,
+      "n_high_masking": 4563,
+      "threshold_masking_q75": 0.07712,
+      "distress_6m_rate_clean": 0.10633,
+      "distress_6m_rate_high_masking": 0.14705,
+      "relative_risk_ratio": 1.383,
+      "senior_dd_rate_clean": 0.06523,
+      "senior_dd_rate_high_masking": 0.02038,
+      "fisher_odds_ratio": 1.449,
+      "fisher_p_value": 8.032371376368998e-17
+    },
+    "h2_scr_provision_gap": {
+      "n_adequate_pdd": 18650,
+      "n_underprovisioned_gt2pp": 2741,
+      "distress_6m_rate_adequate": 0.12686,
+      "distress_6m_rate_underprovisioned": 0.22656,
+      "relative_risk_ratio": 1.786,
+      "fisher_odds_ratio": 2.016,
+      "fisher_p_value": 3.1105241873452238e-40
+    },
+    "h3_shared_cedente_contagion": {
+      "n_healthy_peers": 6572,
+      "n_distressed_peers": 5503,
+      "distress_6m_rate_healthy_peers": 0.09617,
+      "distress_6m_rate_distressed_peers": 0.14338,
+      "relative_risk_ratio": 1.491,
+      "fisher_odds_ratio": 1.573,
+      "fisher_p_value": 7.757498552444477e-16
+    },
+    "event_study_onset_count": 1151
+  },
+  "portfolio_policies": [
+    {
+      "policy": "benchmark_cdi",
+      "severe_monthly_shocks_suffered": 0,
+      "months": 56,
+      "cumulative_return_pct": 77.2,
+      "cdi_cumulative_pct": 77.2,
+      "pct_of_cdi": 100.0,
+      "cagr_aa_pct": 13.04,
+      "excess_over_cdi_aa_pp": 0.0,
+      "volatility_aa_pct": 0.44,
+      "sharpe_ratio": 0.0,
+      "sortino_ratio": 0.0,
+      "max_drawdown_pct": 0.0,
+      "cvar_95_monthly_pct": 0.79
+    },
+    {
+      "policy": "equal_weight_senior",
+      "severe_monthly_shocks_suffered": 57,
+      "months": 56,
+      "cumulative_return_pct": 97.49,
+      "cdi_cumulative_pct": 77.2,
+      "pct_of_cdi": 126.3,
+      "cagr_aa_pct": 15.7,
+      "excess_over_cdi_aa_pp": 2.66,
+      "volatility_aa_pct": 0.67,
+      "sharpe_ratio": 4.266,
+      "sortino_ratio": 9.246,
+      "max_drawdown_pct": 0.0,
+      "cvar_95_monthly_pct": 0.69
+    },
+    {
+      "policy": "yield_chasing_top25",
+      "severe_monthly_shocks_suffered": 8,
+      "months": 56,
+      "cumulative_return_pct": 121.33,
+      "cdi_cumulative_pct": 77.2,
+      "pct_of_cdi": 157.2,
+      "cagr_aa_pct": 18.56,
+      "excess_over_cdi_aa_pp": 5.52,
+      "volatility_aa_pct": 0.68,
+      "sharpe_ratio": 10.402,
+      "sortino_ratio": 19.298,
+      "max_drawdown_pct": 0.0,
+      "cvar_95_monthly_pct": 1.01
+    },
+    {
+      "policy": "traditional_committee",
+      "severe_monthly_shocks_suffered": 1,
+      "months": 56,
+      "cumulative_return_pct": 109.31,
+      "cdi_cumulative_pct": 77.2,
+      "pct_of_cdi": 141.6,
+      "cagr_aa_pct": 17.15,
+      "excess_over_cdi_aa_pp": 4.11,
+      "volatility_aa_pct": 0.53,
+      "sharpe_ratio": 11.923,
+      "sortino_ratio": 14.443,
+      "max_drawdown_pct": 0.0,
+      "cvar_95_monthly_pct": 1.01
+    },
+    {
+      "policy": "ml_watchlist_cutoff",
+      "severe_monthly_shocks_suffered": 5,
+      "months": 56,
+      "cumulative_return_pct": 121.78,
+      "cdi_cumulative_pct": 77.2,
+      "pct_of_cdi": 157.7,
+      "cagr_aa_pct": 18.61,
+      "excess_over_cdi_aa_pp": 5.57,
+      "volatility_aa_pct": 0.73,
+      "sharpe_ratio": 11.066,
+      "sortino_ratio": 19.475,
+      "max_drawdown_pct": 0.0,
+      "cvar_95_monthly_pct": 1.01
+    },
+    {
+      "policy": "cvar_venn_abers_lagged",
+      "severe_monthly_shocks_suffered": 3,
+      "months": 56,
+      "cumulative_return_pct": 118.33,
+      "cdi_cumulative_pct": 77.2,
+      "pct_of_cdi": 153.3,
+      "cagr_aa_pct": 18.21,
+      "excess_over_cdi_aa_pp": 5.17,
+      "volatility_aa_pct": 0.71,
+      "sharpe_ratio": 11.267,
+      "sortino_ratio": 18.113,
+      "max_drawdown_pct": 0.0,
+      "cvar_95_monthly_pct": 1.0
+    },
+    {
+      "policy": "cvar_venn_abers_frictionless_t1",
+      "severe_monthly_shocks_suffered": 3,
+      "months": 56,
+      "cumulative_return_pct": 117.47,
+      "cdi_cumulative_pct": 76.66,
+      "pct_of_cdi": 153.2,
+      "cagr_aa_pct": 18.11,
+      "excess_over_cdi_aa_pp": 5.15,
+      "volatility_aa_pct": 0.65,
+      "sharpe_ratio": 14.667,
+      "sortino_ratio": 18.035,
+      "max_drawdown_pct": 0.0,
+      "cvar_95_monthly_pct": 1.07
+    }
+  ]
+}

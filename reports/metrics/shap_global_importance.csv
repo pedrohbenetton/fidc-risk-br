@@ -1,0 +1,104 @@
+feature,label_ptbr,family,mean_abs_shap
+pdd_carteira_pct,Provisão PDD Total (% Carteira),forensic_accounting,0.06740237562961751
+inad_total_pct,Inadimplência Total Vencida (% Carteira),aging_structure,0.0391028073651837
+rentab_subord_mes_clean,Retorno Mensal da Cota Subordinada (%),waterfall_liquidity,0.03846807600561568
+subordinacao_pct,Colchão de Cota Subordinada (% PL),waterfall_liquidity,0.029343731409674254
+admin_loo_stress_rate,Taxa de Estresse na Administradora (LOO),network_contagion,0.027994820014592896
+inad_31_60_pct,Atraso 31–60 dias (% Carteira),aging_structure,0.0274705579639813
+total_enhancement_pct,Reforço Total Subord. + Mezanino (% PL),waterfall_liquidity,0.024095749997437528
+inad_90p_vol_6m,Volatilidade 6m da Inadimplência,aging_structure,0.023419286900615986
+cota_fidc_cross_pct,Alocação Cruzada em Cotas de FIDCs (%),forensic_accounting,0.023013765373802654
+is_aberto,Condomínio Aberto (Resgatável),waterfall_liquidity,0.021386437145624448
+rentab_senior_3m_excess,Excesso Médio 3m Cota Sênior vs. CDI,waterfall_liquidity,0.012905959978558057
+alm_liq_30d_ratio,Cobertura de Liquidez 30 dias (ALM),waterfall_liquidity,0.012207726498886486
+fund_age_months,Idade do Fundo (Meses),originator_sector,0.011952297558907013
+recompra_carteira_pct,Recompras no Mês (% Carteira),forensic_accounting,0.010538848000448879
+net_cushion_over_bad_debt,Margem Estrutural Líquida de Subordinação,waterfall_liquidity,0.010087833949141726
+pl_log,Porte do Fundo (log PL),waterfall_liquidity,0.008671572976279213
+recompra_3m_avg_pct,Giro Médio 3m de Recompras (% Carteira),forensic_accounting,0.007485441799993494
+rentab_senior_excess_cdi,Retorno Cota Sênior Acima do CDI (p.p.),waterfall_liquidity,0.007421678235946142
+roll_30_to_60_rate,Roll 30 To 60 Rate,aging_structure,0.0059550679089840864
+inad_90p_pct,Inadimplência >90 dias (% Carteira),aging_structure,0.005727823128622993
+prazo_curto_60d_share,Prazo Curto 60D Share,aging_structure,0.004999632562738233
+sec_comercial_varejo_pct,Sec Comercial Varejo Pct,originator_sector,0.004168920457092784
+weighted_maturity_days,Weighted Maturity Days,aging_structure,0.003861075221720299
+inad_early_1_90_pct,Atraso Total 1–90 dias (% Carteira),aging_structure,0.003058817992332395
+gestor_other_funds_cnt,Gestor Other Funds Cnt,network_contagion,0.002588797760820865
+inad_early_1_60_pct,Atraso Curto 1–60 dias (% Carteira),aging_structure,0.0022174963009664777
+selic_delta_12m,Selic Delta 12M,macro_cycle,0.001989580360123962
+inad_sfn_pj_delta_6m,Inad Sfn Pj Delta 6M,macro_cycle,0.0019884554807297694
+inad_90p_delta_1m,Inad 90P Delta 1M,aging_structure,0.0018862396006783628
+sector_hhi,Sector Hhi,originator_sector,0.0015430785287638253
+inad_severe_180p_pct,Inadimplência Longa >180 dias (%),aging_structure,0.0015136222392424423
+senior_perf_shortfall,Senior Perf Shortfall,waterfall_liquidity,0.0013882827524266308
+prazo_medio_180d_share,Prazo Medio 180D Share,aging_structure,0.0013305132616093643
+comprometimento_renda_pct,Comprometimento Renda Pct,macro_cycle,0.0012784263545813186
+rentab_senior_mes_clean,Rentab Senior Mes Clean,waterfall_liquidity,0.0011018641690320613
+early_to_late_ratio,Early To Late Ratio,aging_structure,0.0009760784527827837
+inad_90p_delta_3m,Aceleração 3m da Inadimplência >90d,aging_structure,0.000959847548488722
+inad_sfn_pj_pct,Inadimplência PJ Sistema Financeiro (%),macro_cycle,0.0009214072245694809
+pl_delta_3m_pct,Pl Delta 3M Pct,waterfall_liquidity,0.0008179247101589222
+pdd_coverage_90p,Cobertura de PDD sobre Vencidos >90d,forensic_accounting,0.0006355105715773159
+sec_publico_judicial_pct,Sec Publico Judicial Pct,originator_sector,0.0004533547126574312
+inad_61_90_pct,Atraso 61–90 dias (% Carteira),aging_structure,0.00044284721706745734
+inad_sfn_pf_pct,Inad Sfn Pf Pct,macro_cycle,0.00043267741115325756
+pl_drawdown_12m_pct,Queda Acumulada 12m do PL (%),waterfall_liquidity,0.0004136827018300378
+inad_90p_lag1,Inad 90P Lag1,aging_structure,0.0004086323519706923
+net_flow_3m_pl_pct,Captação Líquida 3m (% PL),waterfall_liquidity,0.0003590207720127511
+gestor_loo_stress_rate,Taxa de Estresse de Fundos Irmãos (Gestor),network_contagion,0.000349575184932059
+inad_90p_lag3,Inad 90P Lag3,aging_structure,0.00033041369843521477
+spread_sfn_pp,Spread Sfn Pp,macro_cycle,0.00032419890561970015
+cdi_mensal_pct,Cdi Mensal Pct,macro_cycle,0.00030716849497707097
+sec_industrial_pct,Sec Industrial Pct,originator_sector,0.00023361410210891192
+has_scr_report,Has Scr Report,forensic_accounting,0.00023220483787060793
+gestor_loo_inad90p,Inadimplência Média de Fundos Irmãos (Gestor),network_contagion,0.00019824368666649314
+juro_real_expost_aa,Juro Real Ex-Post (% a.a.),macro_cycle,0.0001852155780012822
+sec_agronegocio_pct,Sec Agronegocio Pct,originator_sector,0.0001646524357460419
+top3_cedente_pct,Concentração nos Top-3 Cedentes (%),originator_sector,9.290157637334414e-05
+cota_fidc_np_pct,Exposição a Cotas de FIDC-NP (%),forensic_accounting,0.0
+scr_provision_gap_pct,Déficit de Provisão vs. Bacen 2.682 (%),forensic_accounting,0.0
+acao_judicial_pct,Créditos em Ação Judicial (%),forensic_accounting,0.0
+scr_efgh_share,Fatia SCR Risco Alto E–H (%),forensic_accounting,0.0
+substituicao_carteira_pct,Substituições no Mês (% Carteira),forensic_accounting,0.0
+substituicao_3m_avg_pct,Giro Médio 3m de Substituições (%),forensic_accounting,0.0
+emp_recup_judicial_pct,Créditos em Recuperação Judicial (%),forensic_accounting,0.0
+unprovisioned_inad90p_pl,Inadimplência >90d Descoberta (% PL),forensic_accounting,0.0
+inad_90p_delta_6m,Aceleração 6m da Inadimplência >90d,aging_structure,0.0
+inad_early_delta_3m,Inad Early Delta 3M,aging_structure,0.0
+prazo_longo_360p_share,Prazo Longo 360P Share,aging_structure,0.0
+inad_early_delta_1m,Inad Early Delta 1M,aging_structure,0.0
+roll_60_to_90_rate,Roll 60 To 90 Rate,aging_structure,0.0
+inad_1_30_pct,Atraso 1–30 dias (% Carteira),aging_structure,0.0
+recompra_masking_index,Índice Forense de Maquiagem via Recompras,forensic_accounting,0.0
+sec_servicos_pct,Sec Servicos Pct,originator_sector,0.0
+sec_imobiliario_pct,Sec Imobiliario Pct,originator_sector,0.0
+top1_cedente_delta_3m,Top1 Cedente Delta 3M,originator_sector,0.0
+cedente_churn_1m,Rotatividade Mensal de Cedentes (Jaccard),originator_sector,0.0
+cedente_hhi,Índice HHI de Concentração de Cedentes,originator_sector,0.0
+n_cedentes_disclosed,N Cedentes Disclosed,originator_sector,0.0
+pj_cedente_share,Pj Cedente Share,originator_sector,0.0
+top1_cedente_pct,Concentração no Maior Cedente (%),originator_sector,0.0
+has_cotista_interesse,Has Cotista Interesse,waterfall_liquidity,0.0
+is_exclusivo,Fundo Exclusivo,waterfall_liquidity,0.0
+redemption_lag_days,Prazo Contratual de Resgate (Dias),waterfall_liquidity,0.0
+mezanino_pct,Mezanino Pct,waterfall_liquidity,0.0
+subordinacao_delta_6m,Subordinacao Delta 6M,waterfall_liquidity,0.0
+subordinacao_delta_3m,Variação 3m da Subordinação (Queima),waterfall_liquidity,0.0
+cash_liquidity_pct,Caixa + Títulos Públicos (% PL),waterfall_liquidity,0.0
+resgate_solicitado_pl_pct,Fila de Resgates Solicitados (% PL),waterfall_liquidity,0.0
+contagion_cedente_stress_wt,Contágio: Estresse Agudo em Pares de Cedente,network_contagion,0.0
+contagion_cedente_recompra_wt,Contagion Cedente Recompra Wt,network_contagion,0.0
+contagion_cedente_early_wt,Contágio: Atraso 1–60d em Pares de Cedente,network_contagion,0.0
+contagion_cedente_inad90p_wt,Contágio: Inadimplência >90d em Pares de Cedente,network_contagion,0.0
+contagion_shared_cedente_deg,Grau de Cedentes Compartilhados na Rede,network_contagion,0.0
+pr_garantia_pct,Pr Garantia Pct,originator_sector,0.0
+sec_cartoes_pct,Sec Cartoes Pct,originator_sector,0.0
+sec_factoring_pct,Sec Factoring Pct,originator_sector,0.0
+sec_cred_pessoal_pct,Sec Cred Pessoal Pct,originator_sector,0.0
+sec_consignado_pct,Sec Consignado Pct,originator_sector,0.0
+sec_veiculos_pct,Sec Veiculos Pct,originator_sector,0.0
+sec_corporativo_pct,Sec Corporativo Pct,originator_sector,0.0
+selic_meta_aa,Meta Selic Copom (% a.a.),macro_cycle,0.0
+contagion_cedente_max_inad90p,Contagion Cedente Max Inad90P,network_contagion,0.0
+ibc_br_yoy_pct,Ibc Br Yoy Pct,macro_cycle,0.0
+ipca_12m_pct,Ipca 12M Pct,macro_cycle,0.0

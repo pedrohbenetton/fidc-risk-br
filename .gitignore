@@ -1,0 +1,48 @@
+# Virtual environment & caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Raw & heavy lakehouse binaries (regenerated deterministically via CLI)
+data/bronze/
+data/silver/
+data/gold/*.parquet
+data/lakehouse.duckdb*
+models/checkpoints/*.pt
+models/checkpoints/*.cbm
+models/checkpoints/*.pkl
+
+# Keep lightweight exported web bundles, summary metrics & figures tracked!
+!reports/metrics/*.csv
+!reports/metrics/*.json
+!reports/figures/*.png
+!web/data/*.json
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.env
+
+# Fundos identificados (pacote nominal, mapeamento dos códigos do demo): nunca publicar
+data/private/
+web/data/private/
+
+# Build estático do demo (gerado por fidc-risk export-demo)
+dist/
+
+# CSVs da CVM extraídos por competência (cache do boletim e dos relatórios)
+data/cvm_csv/
+
+# Saídas dos comandos de relatório na raiz do repositório (relatórios de carteira são confidenciais)
+/relatorio*.pdf
+/boletim-fidc-*.pdf
+/indicadores.json
+/indicadores-*.json
+/g_*.png
+exemplos/*.pdf
+_site/

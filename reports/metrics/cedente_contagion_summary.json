@@ -1,0 +1,648 @@
+{
+ "periodo": {
+  "inicio": "2022-01",
+  "fim": "2026-10"
+ },
+ "definicoes": {
+  "estresse_vencido90_acima_de": 0.1,
+  "janela_exposicao_nova_meses": 6,
+  "hub_mais_de_classes": 20,
+  "estratos": [
+   "ym",
+   "segmento",
+   "porte"
+  ]
+ },
+ "n_entradas_em_estresse": 1863,
+ "n_exposicoes": 1869,
+ "n_classes_expostas": 862,
+ "n_controles_classe_mes": 41068,
+ "efeitos": [
+  {
+   "horizonte_meses": 1,
+   "desfecho": "entrou_em_estresse",
+   "pareamento": "segmento_porte",
+   "n_expostas": 1661,
+   "n_classes_expostas": 806,
+   "n_controles": 21590,
+   "efeito": 0.017515822982940174,
+   "ic_baixo": 0.009374557641707996,
+   "ic_alto": 0.02636257306736052,
+   "taxa_expostas": 0.03371462974111981,
+   "taxa_controles": 0.01619880675817963,
+   "risco_relativo": 2.081303286372962
+  },
+  {
+   "horizonte_meses": 1,
+   "desfecho": "entrou_em_estresse",
+   "pareamento": "segmento_porte_atraso",
+   "n_expostas": 1330,
+   "n_classes_expostas": 700,
+   "n_controles": 12514,
+   "efeito": 0.009856449109550143,
+   "ic_baixo": 0.0011446386458668968,
+   "ic_alto": 0.01832021605004728,
+   "taxa_expostas": 0.029323308270676692,
+   "taxa_controles": 0.01946685916112655,
+   "risco_relativo": 1.5063194338628867
+  },
+  {
+   "horizonte_meses": 1,
+   "desfecho": "entrou_em_estresse",
+   "pareamento": "segmento_porte_atraso_historico",
+   "n_expostas": 935,
+   "n_classes_expostas": 539,
+   "n_controles": 7592,
+   "efeito": 0.003058794942899141,
+   "ic_baixo": -0.002675569128938405,
+   "ic_alto": 0.009997434022979059,
+   "taxa_expostas": 0.011764705882352941,
+   "taxa_controles": 0.0087059109394538,
+   "risco_relativo": 1.3513469140876655
+  },
+  {
+   "horizonte_meses": 1,
+   "desfecho": "variacao_vencido90",
+   "pareamento": "segmento_porte",
+   "n_expostas": 1661,
+   "n_classes_expostas": 806,
+   "n_controles": 21590,
+   "efeito": 0.002019375306522037,
+   "ic_baixo": 0.00021203166626449806,
+   "ic_alto": 0.004406837208016031,
+   "taxa_expostas": 0.005083333727061935,
+   "taxa_controles": 0.0030639584205398966,
+   "risco_relativo": 1.659073991665398
+  },
+  {
+   "horizonte_meses": 1,
+   "desfecho": "variacao_vencido90",
+   "pareamento": "segmento_porte_atraso",
+   "n_expostas": 1330,
+   "n_classes_expostas": 700,
+   "n_controles": 12514,
+   "efeito": 0.0017043517355621069,
+   "ic_baixo": -0.0005516603899440417,
+   "ic_alto": 0.004241210442609948,
+   "taxa_expostas": 0.005216361114733473,
+   "taxa_controles": 0.0035120093791713666,
+   "risco_relativo": 1.4852924783373544
+  },
+  {
+   "horizonte_meses": 1,
+   "desfecho": "variacao_vencido90",
+   "pareamento": "segmento_porte_atraso_historico",
+   "n_expostas": 935,
+   "n_classes_expostas": 539,
+   "n_controles": 7592,
+   "efeito": 0.0013190534728616254,
+   "ic_baixo": -0.0010557525409035711,
+   "ic_alto": 0.0038384080962238043,
+   "taxa_expostas": 0.0038397234162078926,
+   "taxa_controles": 0.0025206699433462675,
+   "risco_relativo": 1.523294799600197
+  },
+  {
+   "horizonte_meses": 3,
+   "desfecho": "entrou_em_estresse",
+   "pareamento": "segmento_porte",
+   "n_expostas": 1548,
+   "n_classes_expostas": 767,
+   "n_controles": 19680,
+   "efeito": 0.040929599968669864,
+   "ic_baixo": 0.027328090794375273,
+   "ic_alto": 0.05609754882115652,
+   "taxa_expostas": 0.08850129198966408,
+   "taxa_controles": 0.04757169202099421,
+   "risco_relativo": 1.860377216572556
+  },
+  {
+   "horizonte_meses": 3,
+   "desfecho": "entrou_em_estresse",
+   "pareamento": "segmento_porte_atraso",
+   "n_expostas": 1239,
+   "n_classes_expostas": 661,
+   "n_controles": 11427,
+   "efeito": 0.01940333909799245,
+   "ic_baixo": 0.003150315361746439,
+   "ic_alto": 0.036049438817340795,
+   "taxa_expostas": 0.07586763518966909,
+   "taxa_controles": 0.05646429609167664,
+   "risco_relativo": 1.3436390859542244
+  },
+  {
+   "horizonte_meses": 3,
+   "desfecho": "entrou_em_estresse",
+   "pareamento": "segmento_porte_atraso_historico",
+   "n_expostas": 875,
+   "n_classes_expostas": 512,
+   "n_controles": 6908,
+   "efeito": 0.010680666878673549,
+   "ic_baixo": -0.004018483459379018,
+   "ic_alto": 0.024800236734295794,
+   "taxa_expostas": 0.04114285714285714,
+   "taxa_controles": 0.0304621902641836,
+   "risco_relativo": 1.3506204506650825
+  },
+  {
+   "horizonte_meses": 3,
+   "desfecho": "variacao_vencido90",
+   "pareamento": "segmento_porte",
+   "n_expostas": 1548,
+   "n_classes_expostas": 767,
+   "n_controles": 19680,
+   "efeito": 0.005835982201513642,
+   "ic_baixo": 0.0022291311022693094,
+   "ic_alto": 0.01016267332958142,
+   "taxa_expostas": 0.015603458648707493,
+   "taxa_controles": 0.009767476447193852,
+   "risco_relativo": 1.597491300139279
+  },
+  {
+   "horizonte_meses": 3,
+   "desfecho": "variacao_vencido90",
+   "pareamento": "segmento_porte_atraso",
+   "n_expostas": 1239,
+   "n_classes_expostas": 661,
+   "n_controles": 11427,
+   "efeito": 0.004850745371867636,
+   "ic_baixo": 0.0001856140246147135,
+   "ic_alto": 0.009730972663945342,
+   "taxa_expostas": 0.015755353793432455,
+   "taxa_controles": 0.010904608421564817,
+   "risco_relativo": 1.4448344391968138
+  },
+  {
+   "horizonte_meses": 3,
+   "desfecho": "variacao_vencido90",
+   "pareamento": "segmento_porte_atraso_historico",
+   "n_expostas": 875,
+   "n_classes_expostas": 512,
+   "n_controles": 6908,
+   "efeito": 0.0038262434203250005,
+   "ic_baixo": -0.001133540333839672,
+   "ic_alto": 0.009434595596005521,
+   "taxa_expostas": 0.01181379561009433,
+   "taxa_controles": 0.007987552189769329,
+   "risco_relativo": 1.4790257802917088
+  },
+  {
+   "horizonte_meses": 6,
+   "desfecho": "entrou_em_estresse",
+   "pareamento": "segmento_porte",
+   "n_expostas": 1364,
+   "n_classes_expostas": 680,
+   "n_controles": 17078,
+   "efeito": 0.06161548021635423,
+   "ic_baixo": 0.040581043884109116,
+   "ic_alto": 0.08373959314966971,
+   "taxa_expostas": 0.14736070381231672,
+   "taxa_controles": 0.08574522359596248,
+   "risco_relativo": 1.7185879006706042
+  },
+  {
+   "horizonte_meses": 6,
+   "desfecho": "entrou_em_estresse",
+   "pareamento": "segmento_porte_atraso",
+   "n_expostas": 1081,
+   "n_classes_expostas": 577,
+   "n_controles": 9771,
+   "efeito": 0.022311618490750425,
+   "ic_baixo": 0.002281013431748859,
+   "ic_alto": 0.04439909949748457,
+   "taxa_expostas": 0.12025901942645699,
+   "taxa_controles": 0.09794740093570656,
+   "risco_relativo": 1.2277918380437267
+  },
+  {
+   "horizonte_meses": 6,
+   "desfecho": "entrou_em_estresse",
+   "pareamento": "segmento_porte_atraso_historico",
+   "n_expostas": 757,
+   "n_classes_expostas": 451,
+   "n_controles": 5732,
+   "efeito": 0.018304163718880988,
+   "ic_baixo": -0.000848255910300423,
+   "ic_alto": 0.03779573276055982,
+   "taxa_expostas": 0.08058124174372523,
+   "taxa_controles": 0.06227707802484425,
+   "risco_relativo": 1.2939149410892221
+  },
+  {
+   "horizonte_meses": 6,
+   "desfecho": "variacao_vencido90",
+   "pareamento": "segmento_porte",
+   "n_expostas": 1364,
+   "n_classes_expostas": 680,
+   "n_controles": 17078,
+   "efeito": 0.008749131744830581,
+   "ic_baixo": 0.00398721141233797,
+   "ic_alto": 0.013765841175814105,
+   "taxa_expostas": 0.026211376061664,
+   "taxa_controles": 0.017462244316833415,
+   "risco_relativo": 1.5010313443156051
+  },
+  {
+   "horizonte_meses": 6,
+   "desfecho": "variacao_vencido90",
+   "pareamento": "segmento_porte_atraso",
+   "n_expostas": 1081,
+   "n_classes_expostas": 577,
+   "n_controles": 9771,
+   "efeito": 0.005776199197123558,
+   "ic_baixo": -1.6883645260684214e-05,
+   "ic_alto": 0.011864754288420005,
+   "taxa_expostas": 0.02392254291182056,
+   "taxa_controles": 0.01814634371469701,
+   "risco_relativo": 1.3183120130390409
+  },
+  {
+   "horizonte_meses": 6,
+   "desfecho": "variacao_vencido90",
+   "pareamento": "segmento_porte_atraso_historico",
+   "n_expostas": 757,
+   "n_classes_expostas": 451,
+   "n_controles": 5732,
+   "efeito": 0.005066571609288852,
+   "ic_baixo": -0.0009346625273099697,
+   "ic_alto": 0.01202047401004495,
+   "taxa_expostas": 0.020446254787554054,
+   "taxa_controles": 0.015379683178265203,
+   "risco_relativo": 1.3294327685793297
+  }
+ ],
+ "efeito_h6": {
+  "horizonte_meses": 6,
+  "desfecho": "entrou_em_estresse",
+  "pareamento": "segmento_porte",
+  "n_expostas": 1364,
+  "n_classes_expostas": 680,
+  "n_controles": 17078,
+  "efeito": 0.06161548021635423,
+  "ic_baixo": 0.040581043884109116,
+  "ic_alto": 0.08373959314966971,
+  "taxa_expostas": 0.14736070381231672,
+  "taxa_controles": 0.08574522359596248,
+  "risco_relativo": 1.7185879006706042
+ },
+ "pre_tendencia": {
+  "n_expostas": 1479,
+  "n_classes_expostas": 721,
+  "n_controles": 18668,
+  "efeito": -0.004699538422656973,
+  "ic_baixo": -0.008913851132654211,
+  "ic_alto": -0.0014885147832493415,
+  "taxa_expostas": -0.0072339101982015945,
+  "taxa_controles": -0.0025343717755446217,
+  "risco_relativo": null
+ },
+ "sem_hubs_h6": {
+  "n_expostas": 380,
+  "n_classes_expostas": 292,
+  "n_controles": 8679,
+  "efeito": 0.10441842195506988,
+  "ic_baixo": 0.06753327359663959,
+  "ic_alto": 0.14991358923455475,
+  "taxa_expostas": 0.18947368421052632,
+  "taxa_controles": 0.08505526225545643,
+  "risco_relativo": 2.2276538709792915
+ },
+ "pareado_atraso_h6": {
+  "horizonte_meses": 6,
+  "desfecho": "entrou_em_estresse",
+  "pareamento": "segmento_porte_atraso",
+  "n_expostas": 1081,
+  "n_classes_expostas": 577,
+  "n_controles": 9771,
+  "efeito": 0.022311618490750425,
+  "ic_baixo": 0.002281013431748859,
+  "ic_alto": 0.04439909949748457,
+  "taxa_expostas": 0.12025901942645699,
+  "taxa_controles": 0.09794740093570656,
+  "risco_relativo": 1.2277918380437267
+ },
+ "pareado_atraso_dv_h6": {
+  "horizonte_meses": 6,
+  "desfecho": "variacao_vencido90",
+  "pareamento": "segmento_porte_atraso",
+  "n_expostas": 1081,
+  "n_classes_expostas": 577,
+  "n_controles": 9771,
+  "efeito": 0.005776199197123558,
+  "ic_baixo": -1.6883645260684214e-05,
+  "ic_alto": 0.011864754288420005,
+  "taxa_expostas": 0.02392254291182056,
+  "taxa_controles": 0.01814634371469701,
+  "risco_relativo": 1.3183120130390409
+ },
+ "por_ano_pareado_atraso_h6": [
+  {
+   "ano": 2022,
+   "n_expostas": 174,
+   "n_classes_expostas": 130,
+   "n_controles": 1132,
+   "efeito": 0.041040260832055794,
+   "ic_baixo": -0.021292905610916756,
+   "ic_alto": 0.09255719612540599,
+   "taxa_expostas": 0.15517241379310345,
+   "taxa_controles": 0.11413215296104766,
+   "risco_relativo": 1.359585443429447
+  },
+  {
+   "ano": 2023,
+   "n_expostas": 206,
+   "n_classes_expostas": 172,
+   "n_controles": 1359,
+   "efeito": 0.0450782219024643,
+   "ic_baixo": 0.004112166086539534,
+   "ic_alto": 0.08936365855442298,
+   "taxa_expostas": 0.1407766990291262,
+   "taxa_controles": 0.09569847712666191,
+   "risco_relativo": 1.4710442972128066
+  },
+  {
+   "ano": 2024,
+   "n_expostas": 274,
+   "n_classes_expostas": 226,
+   "n_controles": 2489,
+   "efeito": 0.0011285686402392543,
+   "ic_baixo": -0.028284030589723067,
+   "ic_alto": 0.03301515830211657,
+   "taxa_expostas": 0.08029197080291971,
+   "taxa_controles": 0.07916340216268045,
+   "risco_relativo": 1.0142561917427457
+  },
+  {
+   "ano": 2025,
+   "n_expostas": 284,
+   "n_classes_expostas": 233,
+   "n_controles": 2962,
+   "efeito": 0.011005222086410183,
+   "ic_baixo": -0.020097358435991093,
+   "ic_alto": 0.04858630198397708,
+   "taxa_expostas": 0.09507042253521127,
+   "taxa_controles": 0.08406520044880107,
+   "risco_relativo": 1.1309129345752622
+  },
+  {
+   "ano": 2026,
+   "n_expostas": 143,
+   "n_classes_expostas": 143,
+   "n_controles": 1829,
+   "efeito": 0.029769437845103542,
+   "ic_baixo": -0.02851101858181169,
+   "ic_alto": 0.09009213929028848,
+   "taxa_expostas": 0.17482517482517482,
+   "taxa_controles": 0.1450557369800713,
+   "risco_relativo": 1.2052275798591368
+  }
+ ],
+ "pareado_historico_h6": {
+  "horizonte_meses": 6,
+  "desfecho": "entrou_em_estresse",
+  "pareamento": "segmento_porte_atraso_historico",
+  "n_expostas": 757,
+  "n_classes_expostas": 451,
+  "n_controles": 5732,
+  "efeito": 0.018304163718880988,
+  "ic_baixo": -0.000848255910300423,
+  "ic_alto": 0.03779573276055982,
+  "taxa_expostas": 0.08058124174372523,
+  "taxa_controles": 0.06227707802484425,
+  "risco_relativo": 1.2939149410892221
+ },
+ "pareado_historico_dv_h6": {
+  "horizonte_meses": 6,
+  "desfecho": "variacao_vencido90",
+  "pareamento": "segmento_porte_atraso_historico",
+  "n_expostas": 757,
+  "n_classes_expostas": 451,
+  "n_controles": 5732,
+  "efeito": 0.005066571609288852,
+  "ic_baixo": -0.0009346625273099697,
+  "ic_alto": 0.01202047401004495,
+  "taxa_expostas": 0.020446254787554054,
+  "taxa_controles": 0.015379683178265203,
+  "risco_relativo": 1.3294327685793297
+ },
+ "por_ano_pareado_historico_h6": [
+  {
+   "ano": 2022,
+   "n_expostas": 123,
+   "n_classes_expostas": 97,
+   "n_controles": 658,
+   "efeito": 0.011122632656650628,
+   "ic_baixo": -0.03654491146174614,
+   "ic_alto": 0.06324525831537868,
+   "taxa_expostas": 0.10569105691056911,
+   "taxa_controles": 0.09456842425391845,
+   "risco_relativo": 1.1176146556781588
+  },
+  {
+   "ano": 2023,
+   "n_expostas": 129,
+   "n_classes_expostas": 114,
+   "n_controles": 687,
+   "efeito": 0.04277979455818034,
+   "ic_baixo": -0.009533334784598568,
+   "ic_alto": 0.09734689845808295,
+   "taxa_expostas": 0.11627906976744186,
+   "taxa_controles": 0.07349927520926153,
+   "risco_relativo": 1.5820437607905788
+  },
+  {
+   "ano": 2024,
+   "n_expostas": 191,
+   "n_classes_expostas": 168,
+   "n_controles": 1420,
+   "efeito": 0.01665315949080402,
+   "ic_baixo": -0.012938259757396323,
+   "ic_alto": 0.05059977271938297,
+   "taxa_expostas": 0.05759162303664921,
+   "taxa_controles": 0.040938463545845204,
+   "risco_relativo": 1.4067851611518067
+  },
+  {
+   "ano": 2025,
+   "n_expostas": 216,
+   "n_classes_expostas": 184,
+   "n_controles": 1856,
+   "efeito": -0.010518545918769592,
+   "ic_baixo": -0.04313950426716166,
+   "ic_alto": 0.021105635251980143,
+   "taxa_expostas": 0.046296296296296294,
+   "taxa_controles": 0.056814842215065886,
+   "risco_relativo": 0.8148627100124141
+  },
+  {
+   "ano": 2026,
+   "n_expostas": 98,
+   "n_classes_expostas": 98,
+   "n_controles": 1111,
+   "efeito": 0.061845174246227354,
+   "ic_baixo": 0.006890425885910526,
+   "ic_alto": 0.13101096928071196,
+   "taxa_expostas": 0.12244897959183673,
+   "taxa_controles": 0.060603805345609385,
+   "risco_relativo": 2.020483349082433
+  }
+ ],
+ "por_ano_h6": [
+  {
+   "ano": 2022,
+   "n_expostas": 214,
+   "n_classes_expostas": 161,
+   "n_controles": 2174,
+   "efeito": 0.07554074678810511,
+   "ic_baixo": 0.02155921606000315,
+   "ic_alto": 0.13929615249786156,
+   "taxa_expostas": 0.17289719626168223,
+   "taxa_controles": 0.09735644947357712,
+   "risco_relativo": 1.7759192862575286
+  },
+  {
+   "ano": 2023,
+   "n_expostas": 277,
+   "n_classes_expostas": 225,
+   "n_controles": 2446,
+   "efeito": 0.07624343443911046,
+   "ic_baixo": 0.031047285450980833,
+   "ic_alto": 0.12148379936392172,
+   "taxa_expostas": 0.16967509025270758,
+   "taxa_controles": 0.09343165581359714,
+   "risco_relativo": 1.8160342849025557
+  },
+  {
+   "ano": 2024,
+   "n_expostas": 343,
+   "n_classes_expostas": 278,
+   "n_controles": 3848,
+   "efeito": 0.039279200731419175,
+   "ic_baixo": 0.008128608410373338,
+   "ic_alto": 0.07743473056439527,
+   "taxa_expostas": 0.11078717201166181,
+   "taxa_controles": 0.07150797128024264,
+   "risco_relativo": 1.549298211488652
+  },
+  {
+   "ano": 2025,
+   "n_expostas": 351,
+   "n_classes_expostas": 289,
+   "n_controles": 5575,
+   "efeito": 0.04177876365840435,
+   "ic_baixo": 0.004223746846174853,
+   "ic_alto": 0.07808285174184239,
+   "taxa_expostas": 0.11965811965811966,
+   "taxa_controles": 0.07787935599971531,
+   "risco_relativo": 1.5364549195624715
+  },
+  {
+   "ano": 2026,
+   "n_expostas": 179,
+   "n_classes_expostas": 179,
+   "n_controles": 3035,
+   "efeito": 0.10402934060247138,
+   "ic_baixo": 0.046859343057868506,
+   "ic_alto": 0.16147072981627245,
+   "taxa_expostas": 0.20670391061452514,
+   "taxa_controles": 0.10267457001205377,
+   "risco_relativo": 2.0131948016948944
+  }
+ ],
+ "curva_evento": [
+  {
+   "k": -6,
+   "expostas": 0.007231295936944875,
+   "controles": 0.007881186987479942,
+   "n": 738
+  },
+  {
+   "k": -5,
+   "expostas": 0.007927290368658703,
+   "controles": 0.007267827671743771,
+   "n": 769
+  },
+  {
+   "k": -4,
+   "expostas": 0.009104965449547319,
+   "controles": 0.0076229080105323825,
+   "n": 802
+  },
+  {
+   "k": -3,
+   "expostas": 0.007831177120795953,
+   "controles": 0.008013527437025492,
+   "n": 835
+  },
+  {
+   "k": -2,
+   "expostas": 0.008090048006667091,
+   "controles": 0.007423516524813164,
+   "n": 849
+  },
+  {
+   "k": -1,
+   "expostas": 0.007947448237537041,
+   "controles": 0.007012701302385484,
+   "n": 889
+  },
+  {
+   "k": 0,
+   "expostas": 0.006978361670138984,
+   "controles": 0.006843216777915476,
+   "n": 958
+  },
+  {
+   "k": 1,
+   "expostas": 0.010736813267078012,
+   "controles": 0.009305321417842271,
+   "n": 935
+  },
+  {
+   "k": 2,
+   "expostas": 0.015879313923151454,
+   "controles": 0.011537119012368098,
+   "n": 898
+  },
+  {
+   "k": 3,
+   "expostas": 0.018784761537501464,
+   "controles": 0.014815474567288415,
+   "n": 875
+  },
+  {
+   "k": 4,
+   "expostas": 0.02201280247482469,
+   "controles": 0.0161283259343735,
+   "n": 817
+  },
+  {
+   "k": 5,
+   "expostas": 0.022745279269771976,
+   "controles": 0.01944964753587549,
+   "n": 785
+  },
+  {
+   "k": 6,
+   "expostas": 0.027493639375389636,
+   "controles": 0.022311653276737373,
+   "n": 757
+  }
+ ],
+ "cobertura": {
+  "classes_mes": 164008,
+  "sem_cedente_informado": 0.6001597483049608,
+  "com_9_ou_mais": 0.002323057411833569,
+  "cedentes_pj_por_classe_mediana_quando_informa": 1.0
+ },
+ "veredito": {
+  "robusto": false,
+  "forca": null,
+  "motivos": [
+   "o efeito some ao comparar classes com o mesmo histórico de atraso nos 6 meses anteriores"
+  ],
+  "notas": [
+   "antes da exposição, as expostas melhoravam mais que os controles: os grupos diferem no nível de atraso, por isso o teste pareado também pela faixa de vencido 90+"
+  ]
+ }
+}
